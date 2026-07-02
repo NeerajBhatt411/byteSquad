@@ -4567,7 +4567,7 @@ body {
     clear: both;
 }
 
-/* ===== byteSquad header dropdowns v2 — premium, per-product colours ===== */
+/* ===== byteSquad header dropdowns v3 — image tiles, per-product colours ===== */
 .main-navigation .menu-item-has-children { position: relative; }
 
 .bs-dropdown{
@@ -4583,7 +4583,6 @@ body {
 .menu-item-has-children:hover > .bs-dropdown{
   opacity:1; visibility:visible; transform:translate(-50%,0);
 }
-/* caret notch pointing to the nav item */
 .bs-dropdown::before{
   content:""; position:absolute; top:-7px; left:50%; margin-left:-7px;
   width:14px; height:14px; background:#fff;
@@ -4598,17 +4597,21 @@ body {
 .dd-grid{ display:grid; grid-template-columns:1fr 1fr; gap:6px; }
 
 .dd-item{
-  display:flex; gap:13px; align-items:center; padding:11px 12px;
-  border-radius:13px; text-transform:none; letter-spacing:0;
+  display:flex; gap:13px; align-items:center; padding:10px 12px;
+  border-radius:14px; text-transform:none; letter-spacing:0;
   transition:background .18s ease, transform .18s ease;
 }
 .dd-item:hover{ background:#f6f9fd; transform:translateY(-1px); }
+
+/* image tile */
 .dd-item .ic{
-  width:42px; height:42px; border-radius:12px; flex:0 0 auto;
-  display:flex; align-items:center; justify-content:center;
-  transition:transform .18s ease;
+  width:46px; height:46px; border-radius:13px; flex:0 0 auto; overflow:hidden;
+  box-shadow:0 6px 14px -6px rgba(12,20,36,.35);
+  transition:transform .2s cubic-bezier(.2,.8,.3,1), box-shadow .2s ease;
 }
-.dd-item:hover .ic{ transform:scale(1.08); }
+.dd-item .ic img{ width:100%; height:100%; display:block; }
+.dd-item:hover .ic{ transform:scale(1.07) rotate(-2deg); box-shadow:0 10px 20px -8px rgba(12,20,36,.4); }
+
 .dd-item .t{
   display:block; font-weight:700; color:#0f172a; font-size:.92rem;
   line-height:1.25; text-transform:none; letter-spacing:0;
@@ -4634,27 +4637,18 @@ body {
 .dd-foot a svg{ transition:transform .18s ease; }
 .dd-foot a:hover svg{ transform:translateX(3px); }
 
-/* Services — cool slate-blue chips that light up on hover */
-.dd-services{ width:min(560px, calc(100vw - 48px)); }
-.dd-services .ic{ background:#eef4fb; color:#3b6ea5; }
-.dd-services .dd-item:hover .ic{ background:#2563eb; color:#fff; }
+.dd-services{ width:min(580px, calc(100vw - 48px)); }
+.dd-products{ width:min(660px, calc(100vw - 48px)); }
 
-/* White-Label — every product wears its own colour */
-.dd-products{ width:min(640px, calc(100vw - 48px)); }
-.p-taxi .ic{ background:#fff3dd; color:#d97706; }
-.p-taxi:hover{ background:#fffaf1; }
-.p-ott .ic{ background:#ffe9ed; color:#e11d48; }
-.p-ott:hover{ background:#fff6f7; }
-.p-dating .ic{ background:#fce7f3; color:#db2777; }
+/* row hover tinted per product */
+.p-taxi:hover{ background:#fffaf0; }
+.p-ott:hover{ background:#fff5f6; }
 .p-dating:hover{ background:#fdf2f8; }
-.p-crm .ic{ background:#f0eafe; color:#7c3aed; }
 .p-crm:hover{ background:#f8f5ff; }
-.p-school .ic{ background:#e2f7ee; color:#059669; }
 .p-school:hover{ background:#f0fbf6; }
-.p-lms .ic{ background:#e2f2fd; color:#0284c7; }
 .p-lms:hover{ background:#f0f9ff; }
 
-/* Mobile drawer: dropdowns render inline, single column */
+/* Mobile drawer: inline, single column */
 @media (max-width:900px){
   .bs-dropdown{
     position:static; opacity:1; visibility:visible; transform:none;
@@ -4663,7 +4657,7 @@ body {
   .bs-dropdown::before{ display:none; }
   .dd-services,.dd-products{ width:auto; }
   .dd-grid{ grid-template-columns:1fr; gap:2px; }
-  .dd-item{ padding:9px 10px; }
-  .dd-item .ic{ width:36px; height:36px; }
+  .dd-item{ padding:8px 10px; }
+  .dd-item .ic{ width:38px; height:38px; border-radius:11px; }
   .dd-eyebrow,.dd-foot{ display:none; }
 }
