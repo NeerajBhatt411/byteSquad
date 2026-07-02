@@ -117,8 +117,8 @@ export default function HomePage() {
             <span className="about-subtitle animate-fade-up">Who We Are</span>
             <h2 className="animate-fade-up delay-100">About byteSquad</h2>
             <p className="animate-fade-up delay-200">byteSquad is a software development
-              company for teams that want to ship. We partner with startups and growing businesses to turn
-              ideas into real, working products.</p>
+              company that turns ideas into real, working products. We partner with startups and growing
+              businesses to design, build and launch software they can rely on.</p>
             <p className="animate-fade-up delay-300">For teams with a clear vision, we build
               custom software, mobile apps and websites around your exact needs. For teams that want to move
               fast, we offer ready-made white-label products you can brand and launch quickly.</p>
