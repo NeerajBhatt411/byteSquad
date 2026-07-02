@@ -4,7 +4,7 @@ export const SITE = {
   legalName: "byteSquad",
   tagline: "Because every byte matters.",
   description:
-    "byteSquad is a software development studio building apps, websites and white-label products. Because every byte matters.",
+    "byteSquad is a software development company building apps, websites and white-label products. Because every byte matters.",
   url: "https://www.legisproadvisors.com",
   contact: {
     address: "Paschim Vihar, New Delhi",

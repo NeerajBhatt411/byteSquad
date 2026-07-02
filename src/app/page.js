@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CodeTyper from "@/components/CodeTyper";
+import PromoPlayer from "@/components/PromoPlayer";
 
 // No page title here — the home page uses the root default:
 // "byteSquad — Because every byte matters"
@@ -19,7 +19,7 @@ export default function HomePage() {
       <section className="about-section">
         <div className="container about-container">
           <div className="about-image animate-fade-up">
-            <CodeTyper />
+            <PromoPlayer />
           </div>            <div className="about-content">
             <span className="about-subtitle animate-fade-up">Who We Are</span>
             <h2 className="animate-fade-up delay-100">About byteSquad</h2>

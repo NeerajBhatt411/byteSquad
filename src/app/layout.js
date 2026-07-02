@@ -11,7 +11,7 @@ export const metadata = {
     template: "%s - byteSquad",
   },
   description:
-    "byteSquad is a software development studio building apps, websites and white-label products. Because every byte matters.",
+    "byteSquad is a software development company building apps, websites and white-label products. Because every byte matters.",
 };
 
 export default function RootLayout({ children }) {
