@@ -4578,7 +4578,7 @@ body {
   box-shadow:0 10px 20px -12px rgba(12,20,36,.12), 0 34px 80px -28px rgba(12,20,36,.28);
   opacity:0; visibility:hidden;
   transition:opacity .22s ease, transform .25s cubic-bezier(.2,.8,.3,1), visibility .22s;
-  padding:14px 14px 12px;
+  padding:18px 18px 16px;
 }
 .menu-item-has-children:hover > .bs-dropdown{
   opacity:1; visibility:visible; transform:translate(-50%,0);
@@ -4592,12 +4592,12 @@ body {
 
 .dd-eyebrow{
   display:block; font-size:.67rem; letter-spacing:.13em; text-transform:uppercase;
-  color:#8a94a6; font-weight:700; padding:4px 12px 10px;
+  color:#8a94a6; font-weight:700; padding:4px 14px 12px;
 }
-.dd-grid{ display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.dd-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
 
 .dd-item{
-  display:flex; gap:13px; align-items:center; padding:10px 12px;
+  display:flex; gap:14px; align-items:center; padding:12px 14px;
   border-radius:14px; text-transform:none; letter-spacing:0;
   transition:background .18s ease, transform .18s ease;
 }
@@ -4605,7 +4605,7 @@ body {
 
 /* image tile */
 .dd-item .ic{
-  width:46px; height:46px; border-radius:13px; flex:0 0 auto; overflow:hidden;
+  width:48px; height:48px; border-radius:13px; flex:0 0 auto; overflow:hidden;
   box-shadow:0 6px 14px -6px rgba(12,20,36,.35);
   transition:transform .2s cubic-bezier(.2,.8,.3,1), box-shadow .2s ease;
 }
@@ -4623,7 +4623,7 @@ body {
 
 .dd-foot{
   display:flex; justify-content:space-between; align-items:center; gap:12px;
-  margin:12px -14px -12px; padding:12px 22px;
+  margin:14px -18px -16px; padding:12px 22px;
   background:#f7fafd; border-top:1px solid #edf2f8;
   border-radius:0 0 18px 18px;
   font-size:.8rem; color:#8a94a6; text-transform:none; letter-spacing:0;
@@ -4637,8 +4637,8 @@ body {
 .dd-foot a svg{ transition:transform .18s ease; }
 .dd-foot a:hover svg{ transform:translateX(3px); }
 
-.dd-services{ width:min(580px, calc(100vw - 48px)); }
-.dd-products{ width:min(660px, calc(100vw - 48px)); }
+.dd-services{ width:min(620px, calc(100vw - 48px)); }
+.dd-products{ width:min(700px, calc(100vw - 48px)); }
 
 /* row hover tinted per product */
 .p-taxi:hover{ background:#fffaf0; }

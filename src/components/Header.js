@@ -14,8 +14,9 @@ const SERVICES = [
   { label: "Backend Development", desc: "APIs & databases", href: "/services#backend", img: "/menu-icons/backend.svg" },
   { label: "UI/UX Design", desc: "Figma, research → UI", href: "/services#uiux", img: "/menu-icons/uiux.svg" },
   { label: "E-commerce", desc: "Stores built to sell", href: "/services#ecommerce", img: "/menu-icons/ecommerce.svg" },
-  { label: "Custom Software", desc: "Dashboards, tools, SaaS", href: "/services#custom", img: "/menu-icons/custom.svg" },
+  { label: "Custom Software", desc: "Dashboards & internal tools", href: "/services#custom", img: "/menu-icons/custom.svg" },
   { label: "WordPress", desc: "Themes, plugins & CMS", href: "/services#wordpress", img: "/menu-icons/wordpress.svg" },
+  { label: "SaaS Development", desc: "Multi-tenant cloud platforms", href: "/services#saas", img: "/menu-icons/saas.svg" },
 ];
 
 const PRODUCTS = [
@@ -85,7 +86,7 @@ export default function Header() {
 
             <li className="menu-item-has-children">
               <Link href="/white-label" className={isActive(pathname, "/white-label") ? "active" : ""}>
-                White-Label
+                White-Label Solutions
                 <svg className="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="6 9 12 15 18 9" />
