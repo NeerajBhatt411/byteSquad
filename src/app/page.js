@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CodeTyper from "@/components/CodeTyper";
 
 export const metadata = { title: "Home" };
 
@@ -17,11 +18,7 @@ export default function HomePage() {
       <section className="about-section">
         <div className="container about-container">
           <div className="about-image animate-fade-up">
-            <div className="video-wrapper-responsive">
-              <iframe src="/videos/final-video.html" allowFullScreen scrolling="no" style={{ border: "none" }}
-                title="byteSquad Corporate Video">
-              </iframe>
-            </div>
+            <CodeTyper />
           </div>            <div className="about-content">
             <span className="about-subtitle animate-fade-up">Who We Are</span>
             <h2 className="animate-fade-up delay-100">About byteSquad</h2>

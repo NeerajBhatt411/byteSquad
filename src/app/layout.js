@@ -7,11 +7,11 @@ import ThemeScripts from "@/components/ThemeScripts";
 export const metadata = {
   metadataBase: new URL("https://www.legisproadvisors.com"),
   title: {
-    default: "byteSquad",
+    default: "byteSquad — Because every byte matters",
     template: "%s - byteSquad",
   },
   description:
-    "byteSquad — helping businesses navigate complex legal and regulatory landscapes.",
+    "byteSquad is a software development studio building apps, websites and white-label products. Because every byte matters.",
 };
 
 export default function RootLayout({ children }) {
