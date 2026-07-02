@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-<defs><linearGradient id="g" x1="4" y1="2" x2="44" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#34D399"/><stop offset="1" stop-color="#059669"/></linearGradient></defs>
-<rect width="48" height="48" rx="13" fill="url(#g)"/>
-<rect x="1" y="1" width="46" height="46" rx="12" fill="none" stroke="#fff" stroke-opacity=".25"/>
-<rect width="48" height="23" rx="13" fill="#fff" opacity=".12"/>
-<g transform="translate(10,10) scale(1.1667)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></g>
+<rect width="48" height="48" rx="13" fill="#EFF8EC"/>
+<rect x=".75" y=".75" width="46.5" height="46.5" rx="12.25" fill="none" stroke="#539E43" stroke-opacity=".28" stroke-width="1.5"/>
+<defs><linearGradient id="n" x1="14" y1="10" x2="36" y2="38" gradientUnits="userSpaceOnUse"><stop stop-color="#6CC24A"/><stop offset="1" stop-color="#3F873F"/></linearGradient></defs>
+<path d="M24 8.2 38 16.1v15.8L24 39.8 10 31.9V16.1z" fill="url(#n)"/>
+<text x="24" y="29" font-family="Helvetica,Arial,sans-serif" font-weight="700" font-size="12.5" fill="#fff" text-anchor="middle">JS</text>
 </svg>
