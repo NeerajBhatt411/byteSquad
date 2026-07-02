@@ -1,7 +1,8 @@
 import Link from "next/link";
 import CodeTyper from "@/components/CodeTyper";
 
-export const metadata = { title: "Home" };
+// No page title here — the home page uses the root default:
+// "byteSquad — Because every byte matters"
 
 export default function HomePage() {
   return (
