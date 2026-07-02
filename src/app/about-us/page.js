@@ -6,7 +6,7 @@ export default function AboutPage() {
       {/* Inner Hero Section */}
       <section className="inner-hero" style={{ backgroundImage: "url('/images/about-us-bg.png')" }}>
         <div className="inner-hero-content">
-          <h1 className="animate-fade-up" style={{ maxWidth: "900px", margin: "0 auto 1.5rem" }}>Learn more about Legispro
+          <h1 className="animate-fade-up" style={{ maxWidth: "900px", margin: "0 auto 1.5rem" }}>Learn more about byteSquad
             Advisors</h1>
           <p className="animate-fade-up delay-200" style={{ fontSize: "1.25rem", maxWidth: "700px", margin: "0 auto" }}>and
             our approach to corporate compliance and governance advisory.</p>
@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className="story-content animate-fade-up">
             <span className="about-subtitle">Who We Are</span>
             <h2>Advisory Support Built for Sustainable Growth</h2>
-            <p style={{ textAlign: "justify" }}>Legispro Advisors partners with businesses, startups, investors, and
+            <p style={{ textAlign: "justify" }}>byteSquad partners with businesses, startups, investors, and
               institutions to deliver advisory services in corporate compliance, governance, and regulatory
               matters.</p>
             <p style={{ textAlign: "justify" }}>We assist organizations in navigating regulatory requirements with
@@ -29,7 +29,7 @@ export default function AboutPage() {
               solutions that can be effectively implemented.</p>
           </div>
           <div className="story-image animate-fade-up delay-200">
-            <img src="/images/about-us1.png" alt="Legispro Advisors Story" />
+            <img src="/images/about-us1.png" alt="byteSquad Story" />
           </div>
         </div>
       </section>
@@ -49,8 +49,8 @@ export default function AboutPage() {
             </div>
             <div className="ideology-card">
               <h3>Founder’s Ideology</h3>
-              <p className="ideology-subtitle">The Foundation of Legispro Advisors</p>
-              <p>Legispro Advisors is built on the belief that strong businesses are not only driven by vision, but are sustained through clarity in decision-making, structured execution, and a deep commitment to integrity.</p>
+              <p className="ideology-subtitle">The Foundation of byteSquad</p>
+              <p>byteSquad is built on the belief that strong businesses are not only driven by vision, but are sustained through clarity in decision-making, structured execution, and a deep commitment to integrity.</p>
               <p>From our experience of working closely with startups, founders, and institutional stakeholders, we have observed that many challenges faced by businesses are not due to a lack of opportunity, but due to gaps in structure, governance, and regulatory alignment.</p>
               <p>This understanding forms the foundation of our approach — where advisory goes beyond compliance and becomes an enabler of long-term growth, stability, and trust.</p>
               <blockquote>“Entrepreneurship thrives when supported by clarity, structure, and integrity.”</blockquote>

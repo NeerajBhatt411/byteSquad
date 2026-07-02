@@ -1,10 +1,10 @@
-// Site config for the Legispro Advisors port (used by sitemap/robots/metadata).
+// Site config for the byteSquad port (used by sitemap/robots/metadata).
 export const SITE = {
-  name: "Legispro Advisors",
-  legalName: "Legispro Advisors",
+  name: "byteSquad",
+  legalName: "byteSquad",
   tagline: "Where Governance Meets Growth",
   description:
-    "Legispro Advisors — helping businesses navigate complex legal and regulatory landscapes.",
+    "byteSquad — helping businesses navigate complex legal and regulatory landscapes.",
   url: "https://www.legisproadvisors.com",
   contact: {
     address: "Paschim Vihar, New Delhi",

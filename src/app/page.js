@@ -19,13 +19,13 @@ export default function HomePage() {
           <div className="about-image animate-fade-up">
             <div className="video-wrapper-responsive">
               <iframe src="/videos/final-video.html" allowFullScreen scrolling="no" style={{ border: "none" }}
-                title="Legispro Advisors Corporate Video">
+                title="byteSquad Corporate Video">
               </iframe>
             </div>
           </div>            <div className="about-content">
             <span className="about-subtitle animate-fade-up">Who We Are</span>
-            <h2 className="animate-fade-up delay-100">About Legispro Advisors</h2>
-            <p className="animate-fade-up delay-200">Legispro Advisors partners with
+            <h2 className="animate-fade-up delay-100">About byteSquad</h2>
+            <p className="animate-fade-up delay-200">byteSquad partners with
               businesses, startups, investors, and institutions to deliver advisory services in corporate
               compliance, governance, and regulatory matters.</p>
             <p className="animate-fade-up delay-300">We assist organizations in navigating

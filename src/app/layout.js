@@ -7,11 +7,11 @@ import ThemeScripts from "@/components/ThemeScripts";
 export const metadata = {
   metadataBase: new URL("https://www.legisproadvisors.com"),
   title: {
-    default: "Legispro Advisors",
-    template: "%s - Legispro Advisors",
+    default: "byteSquad",
+    template: "%s - byteSquad",
   },
   description:
-    "Legispro Advisors — helping businesses navigate complex legal and regulatory landscapes.",
+    "byteSquad — helping businesses navigate complex legal and regulatory landscapes.",
 };
 
 export default function RootLayout({ children }) {

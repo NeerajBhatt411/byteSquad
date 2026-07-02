@@ -47,7 +47,7 @@ export default async function Page({ params }) {
             <h2>2. Artificial Intelligence and Ethics</h2>
             <p>As AI becomes deeply integrated into business operations, regulators are paying close attention to algorithmic bias and automated decision-making. Companies deploying AI must establish an internal ethics committee to audit AI models and ensure transparency.</p>
 
-            <p>The key takeaway is that waiting for legislation to catch up to technology is a risky strategy. Legispro Advisors recommends proactive legal frameworks to safeguard against future regulatory crackdowns.</p>
+            <p>The key takeaway is that waiting for legislation to catch up to technology is a risky strategy. byteSquad recommends proactive legal frameworks to safeguard against future regulatory crackdowns.</p>
             <ul>
               <li><Link href="/" className="active">Home</Link></li>
               <li><Link href="/about-us">About Us</Link></li>
@@ -63,7 +63,7 @@ export default async function Page({ params }) {
               <div className="author-details">
                 <span className="published-date">Published on March 15, 2026</span>
                 <h4>Written by Rohit Sharma</h4>
-                <p className="author-bio">Legal expert and advisor at Legispro Advisors, specializing in corporate compliance and governance strategies. With over 15 years of experience, he helps enterprises navigate complex global frameworks.</p>
+                <p className="author-bio">Legal expert and advisor at byteSquad, specializing in corporate compliance and governance strategies. With over 15 years of experience, he helps enterprises navigate complex global frameworks.</p>
               </div>
             </div>
 

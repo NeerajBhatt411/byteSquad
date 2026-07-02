@@ -9,7 +9,7 @@ export default function PrivacyPage() {
         <div className="container">
           <Link className="policy-back" href="/">Back to Home</Link>
           <h1>Privacy Policy</h1>
-          <p className="policy-subtitle">Legispro Advisors</p>
+          <p className="policy-subtitle">byteSquad</p>
           <p className="policy-updated">Last Updated: 01-04-2026</p>
         </div>
       </section>
@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <div className="container">
           <div className="policy-section">
             <h2>1. Introduction</h2>
-            <p>Legispro Advisors ("we", "our", or "us") is committed to protecting the privacy and confidentiality of individuals and entities who engage with us. This Privacy Policy outlines how we collect, use, disclose, and safeguard information when you visit our website or engage with our services.</p>
+            <p>byteSquad ("we", "our", or "us") is committed to protecting the privacy and confidentiality of individuals and entities who engage with us. This Privacy Policy outlines how we collect, use, disclose, and safeguard information when you visit our website or engage with our services.</p>
             <p>By accessing our website or providing your information, you agree to the terms of this Privacy Policy.</p>
           </div>
 
@@ -122,7 +122,7 @@ export default function PrivacyPage() {
             <h2>12. Contact Us</h2>
             <p>For any questions or concerns regarding this Privacy Policy, please contact:</p>
             <div className="policy-contact">
-              <p><strong>Legispro Advisors</strong></p>
+              <p><strong>byteSquad</strong></p>
               <p>Email: info@legisproadvisors.com</p>
               <p>Phone: +91-8368383581</p>
               <p>Website: www.legisproadvisors.com</p>

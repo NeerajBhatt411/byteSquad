@@ -9,7 +9,11 @@ export default function Footer() {
           {/* Brand & Social */}
           <div className="footer-col brand-col">
             <Link href="/" className="footer-logo">
-              <span className="logo-text">Legispro <span className="accent">Advisors</span></span>
+              <img
+                src="/brand/byteSquad-logo-dark.svg"
+                alt="byteSquad"
+                style={{ height: "34px", width: "auto", background: "transparent", padding: 0 }}
+              />
             </Link>
             <div className="footer-tagline-text">
               <span>Compliance</span>
@@ -100,7 +104,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <div className="footer-bottom-left">
-            <p className="footer-bottom-copy">&copy; 2026 Legispro Advisors. All rights reserved.</p>
+            <p className="footer-bottom-copy">&copy; 2026 byteSquad. All rights reserved.</p>
           </div>
           <div className="footer-bottom-center">
             <p className="footer-bottom-dev">Developed By Neeraj Bhatt</p>

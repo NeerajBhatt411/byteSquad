@@ -9,7 +9,7 @@ export default function TermsPage() {
         <div className="container">
           <Link className="policy-back" href="/">Back to Home</Link>
           <h1>Terms of Service</h1>
-          <p className="policy-subtitle">Legispro Advisors</p>
+          <p className="policy-subtitle">byteSquad</p>
           <p className="policy-updated">Last Updated: 01-04-2026</p>
         </div>
       </section>
@@ -18,13 +18,13 @@ export default function TermsPage() {
         <div className="container">
           <div className="policy-section">
             <h2>1. Introduction</h2>
-            <p>These Terms of Service ("Terms") govern your access to and use of the website and services provided by Legispro Advisors ("Firm", "we", "our", or "us").</p>
+            <p>These Terms of Service ("Terms") govern your access to and use of the website and services provided by byteSquad ("Firm", "we", "our", or "us").</p>
             <p>By accessing our website or engaging with our services, you agree to be bound by these Terms. If you do not agree, you should not use our website or services.</p>
           </div>
 
           <div className="policy-section">
             <h2>2. Nature of Services</h2>
-            <p>Legispro Advisors provides corporate compliance, governance, and regulatory advisory services.</p>
+            <p>byteSquad provides corporate compliance, governance, and regulatory advisory services.</p>
             <ul>
               <li>The information available on this website is for general informational purposes only.</li>
               <li>It does not constitute legal, financial, or professional advice.</li>
@@ -56,7 +56,7 @@ export default function TermsPage() {
 
           <div className="policy-section">
             <h2>5. Intellectual Property</h2>
-            <p>All content on this website, including text, design, graphics, logos, and materials is the property of Legispro Advisors unless otherwise stated.</p>
+            <p>All content on this website, including text, design, graphics, logos, and materials is the property of byteSquad unless otherwise stated.</p>
             <p>You may:</p>
             <ul>
               <li>View and use content for personal or informational purposes.</li>
@@ -89,7 +89,7 @@ export default function TermsPage() {
 
           <div className="policy-section">
             <h2>8. Limitation of Liability</h2>
-            <p>To the fullest extent permitted by law, Legispro Advisors shall not be liable for any direct, indirect, incidental, or consequential damages arising from:</p>
+            <p>To the fullest extent permitted by law, byteSquad shall not be liable for any direct, indirect, incidental, or consequential damages arising from:</p>
             <ul>
               <li>Use of the website.</li>
               <li>Reliance on information available on the website.</li>
@@ -110,7 +110,7 @@ export default function TermsPage() {
 
           <div className="policy-section">
             <h2>10. Indemnity</h2>
-            <p>You agree to indemnify and hold harmless Legispro Advisors from any claims, losses, or damages arising out of:</p>
+            <p>You agree to indemnify and hold harmless byteSquad from any claims, losses, or damages arising out of:</p>
             <ul>
               <li>Your use of the website.</li>
               <li>Violation of these Terms.</li>
@@ -152,7 +152,7 @@ export default function TermsPage() {
             <h2>15. Contact Details</h2>
             <p>For any queries regarding these Terms, please contact:</p>
             <div className="policy-contact">
-              <p><strong>Legispro Advisors</strong></p>
+              <p><strong>byteSquad</strong></p>
               <p>Email: info@legisproadvisors.com</p>
               <p>Phone: +91-8368383581</p>
               <p>Website: www.legisproadvisors.com</p>
