@@ -4661,3 +4661,12 @@ body {
   .dd-item .ic{ width:38px; height:38px; border-radius:11px; }
   .dd-eyebrow,.dd-foot{ display:none; }
 }
+
+/* Equal-feel panels: services (4 compact rows) ≈ products (3 taller rows) */
+.dd-item .ic{ width:50px; height:50px; }
+.dd-services .dd-item{ padding:11px 14px; }
+.dd-products .dd-item{ padding:20px 14px; }
+@media (max-width:900px){
+  .dd-item .ic{ width:38px; height:38px; }
+  .dd-services .dd-item,.dd-products .dd-item{ padding:8px 10px; }
+}
