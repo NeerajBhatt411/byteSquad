@@ -16,16 +16,22 @@ export default function Header() {
       <div className="container header-container">
         <Link href="/" className="site-logo">
           <img
-            src="/brand/byteSquad-logo.svg"
+            src="/brand/byteSquad-icon-tight.svg"
+            alt=""
+            style={{ height: "clamp(34px, 6vw, 44px)", width: "auto" }}
+          />
+          <img
+            src="/brand/byteSquad-wordmark-tight.svg"
             alt="byteSquad"
-            style={{ height: "clamp(34px, 6.5vw, 48px)", width: "auto" }}
+            style={{ height: "clamp(21px, 4vw, 27px)", width: "auto" }}
           />
         </Link>
 
         <nav className="main-navigation" id="site-navigation">
           <div className="mobile-menu-header">
             <Link href="/" className="mobile-menu-brand">
-              <img src="/brand/byteSquad-logo.svg" alt="byteSquad" style={{ height: "42px", width: "auto" }} />
+              <img src="/brand/byteSquad-icon-tight.svg" alt="" style={{ height: "38px", width: "auto" }} />
+              <img src="/brand/byteSquad-wordmark-tight.svg" alt="byteSquad" style={{ height: "24px", width: "auto" }} />
             </Link>
             <button className="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
               <span></span>
