@@ -26,14 +26,14 @@ export default function HomePage() {
           </div>            <div className="about-content">
             <span className="about-subtitle animate-fade-up">Who We Are</span>
             <h2 className="animate-fade-up delay-100">About byteSquad</h2>
-            <p className="animate-fade-up delay-200">byteSquad partners with
-              businesses, startups, investors, and institutions to deliver advisory services in corporate
-              compliance, governance, and regulatory matters.</p>
-            <p className="animate-fade-up delay-300">We assist organizations in navigating
-              regulatory requirements with clarity while strengthening internal frameworks that support
-              sustainable and well-governed growth.</p>
-            <p className="animate-fade-up delay-400">Our advisory is grounded in
-              practicality, with a focus on delivering solutions that can be effectively implemented.</p>
+            <p className="animate-fade-up delay-200">byteSquad is a software development
+              company for teams that want to ship. We partner with startups and growing businesses to turn
+              ideas into real, working products.</p>
+            <p className="animate-fade-up delay-300">For teams with a clear vision, we build
+              custom software, mobile apps and websites around your exact needs. For teams that want to move
+              fast, we offer ready-made white-label products you can brand and launch quickly.</p>
+            <p className="animate-fade-up delay-400">Design and engineering sit under one
+              roof — so what we plan is what we ship, built on clean, scalable foundations.</p>
 
             <div className="about-actions animate-fade-up delay-500">
               <Link href="/about-us" className="btn-primary btn-large">More About Us</Link>
