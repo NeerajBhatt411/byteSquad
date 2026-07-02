@@ -12,7 +12,7 @@ export default function Footer() {
               <img
                 src="/brand/byteSquad-logo-dark.svg"
                 alt="byteSquad"
-                style={{ height: "34px", width: "auto", background: "transparent", padding: 0 }}
+                style={{ height: "44px", width: "auto", background: "transparent", padding: 0 }}
               />
             </Link>
             <div className="footer-tagline-text">
