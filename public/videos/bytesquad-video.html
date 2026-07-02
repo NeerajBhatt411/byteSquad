@@ -280,7 +280,7 @@
 
       // Progress bar
       const progress = document.getElementById('progressBar');
-      const totalDuration = 20000;
+      const totalDuration = 14000;
       const startTime = performance.now();
       (function tick() {
         const pct = Math.min(((performance.now() - startTime) / totalDuration) * 100, 100);
@@ -294,15 +294,15 @@
 
       // ── SCENE 1 (0 – 4.5s) — tagline ──
       showScene('s1');
-      await slideIn(document.getElementById('s1h1'), 850, 0);
-      await slideIn(document.getElementById('s1h2'), 850, 250);
-      await new Promise(r => setTimeout(r, 2300));
-      await fadeOut(document.getElementById('s1'), 750);
+      await slideIn(document.getElementById('s1h1'), 650, 0);
+      await slideIn(document.getElementById('s1h2'), 650, 150);
+      await new Promise(r => setTimeout(r, 1250));
+      await fadeOut(document.getElementById('s1'), 500);
       hideScene('s1');
 
       // ── SCENE 2 (4.5 – 8.5s) — Apps · Web · UI/UX ──
       showScene('s2');
-      await fadeIn(document.getElementById('p1'), 650, 0);
+      await fadeIn(document.getElementById('p1'), 450, 0);
       await new Promise(r => setTimeout(r, 150));
       await Promise.all([
         fadeIn(document.getElementById('pd1'), 350, 0),
@@ -313,21 +313,21 @@
         fadeIn(document.getElementById('pd2'), 350, 0),
         fadeIn(document.getElementById('p3'), 650, 100),
       ]);
-      await new Promise(r => setTimeout(r, 2200));
-      await fadeOut(document.getElementById('s2'), 750);
+      await new Promise(r => setTimeout(r, 1200));
+      await fadeOut(document.getElementById('s2'), 500);
       hideScene('s2');
 
       // ── SCENE 3 (8.5 – 12.5s) — startups + stack ──
       showScene('s3');
-      await slideIn(document.getElementById('s3h'), 850, 0);
+      await slideIn(document.getElementById('s3h'), 650, 0);
       await fadeIn(document.getElementById('s3sub'), 700, 500);
-      await new Promise(r => setTimeout(r, 2400));
-      await fadeOut(document.getElementById('s3'), 750);
+      await new Promise(r => setTimeout(r, 1300));
+      await fadeOut(document.getElementById('s3'), 500);
       hideScene('s3');
 
       // ── SCENE 4 (12.5 – 17s) — brand name ──
       showScene('s4');
-      await slideIn(document.getElementById('firmName'), 900, 0);
+      await slideIn(document.getElementById('firmName'), 700, 0);
       const div = document.getElementById('firmDivider');
       div.style.opacity = 0; div.style.width = '0px';
       await Promise.all([
@@ -335,15 +335,15 @@
         animate(div, 0, 160, 700, 300, 'width', 'px'),
       ]);
       await fadeIn(document.getElementById('firmTagline'), 650, 100);
-      await new Promise(r => setTimeout(r, 2600));
-      await fadeOut(document.getElementById('s4'), 750);
+      await new Promise(r => setTimeout(r, 1400));
+      await fadeOut(document.getElementById('s4'), 500);
       hideScene('s4');
 
       // ── SCENE 5 (17 – 20s) ──
       showScene('s5');
-      await slideIn(document.getElementById('pt'), 850, 0);
-      await new Promise(r => setTimeout(r, 2200));
-      await fadeOut(document.getElementById('s5'), 1000);
+      await slideIn(document.getElementById('pt'), 650, 0);
+      await new Promise(r => setTimeout(r, 1200));
+      await fadeOut(document.getElementById('s5'), 650);
       await fadeOut(document.getElementById('accentLine'), 900);
       hideScene('s5');
 
@@ -351,7 +351,7 @@
       setTimeout(() => {
         restartVideo();
         setTimeout(startVideo, 200);
-      }, 1000);
+      }, 600);
     }
 
     function restartVideo() {
