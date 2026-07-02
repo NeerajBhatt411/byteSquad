@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>byteSquad – Brand Video</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      height: 100vh;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .stage {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #f4f8fc;
+      overflow: hidden;
+    }
+
+    /* Soft light gradient wash */
+    .stage::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 25%, rgba(180, 215, 255, 0.30) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 80%, rgba(100, 160, 230, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 110%, rgba(68, 114, 196, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Thin corner bracket marks */
+    .corner { position: absolute; width: 16px; height: 16px; opacity: 0.35; }
+    .corner-tl { top: 18px; left: 18px; border-top: 1px solid #4472c4; border-left: 1px solid #4472c4; }
+    .corner-tr { top: 18px; right: 18px; border-top: 1px solid #4472c4; border-right: 1px solid #4472c4; }
+    .corner-bl { bottom: 18px; left: 18px; border-bottom: 1px solid #4472c4; border-left: 1px solid #4472c4; }
+    .corner-br { bottom: 18px; right: 18px; border-bottom: 1px solid #4472c4; border-right: 1px solid #4472c4; }
+
+    /* Blue accent divider line */
+    .accent-line {
+      position: absolute;
+      bottom: 74px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #4472c4, #8ab4f8, #4472c4, transparent);
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .scene {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      padding: 0 20px;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    .headline {
+      color: #0d1e3a;
+      font-size: clamp(19px, 6vw, 34px);
+      font-weight: 300;
+      letter-spacing: 0.14em;
+      text-align: center;
+      line-height: 1.55;
+      text-transform: uppercase;
+    }
+
+    .headline em { font-style: normal; font-weight: 600; color: #0d1e3a; }
+    .headline .accent { color: #2b5faa; font-weight: 500; }
+
+    .pill-row {
+      display: flex;
+      gap: clamp(14px, 4vw, 32px);
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      color: #1a3560;
+      font-size: clamp(13px, 3.6vw, 19px);
+      font-weight: 300;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      opacity: 0;
+    }
+
+    .pill-dot {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: #4472c4; opacity: 0; flex-shrink: 0;
+    }
+
+    .sub-label {
+      margin-top: 20px;
+      font-size: clamp(9px, 2.2vw, 11px);
+      letter-spacing: 0.45em;
+      color: #4472c4;
+      text-transform: uppercase;
+      opacity: 0;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* Scene 4 – brand name */
+    .firm-wrap { display: flex; flex-direction: column; align-items: center; }
+
+    .firm-name {
+      opacity: 0;
+      color: #0d1e3a;
+      font-size: clamp(17px, 5.2vw, 30px);
+      font-weight: 300;
+      letter-spacing: 0.44em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .firm-name em { font-style: normal; font-weight: 600; color: #2b5faa; }
+
+    .firm-divider {
+      width: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, #4472c4, #8ab4f8, #4472c4, transparent);
+      margin: 18px auto;
+      opacity: 0;
+    }
+
+    .firm-tagline {
+      opacity: 0;
+      color: #4472c4;
+      font-size: clamp(9px, 2.2vw, 10.5px);
+      font-weight: 500;
+      letter-spacing: 0.6em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* Scene 5 */
+    .partner-text {
+      color: #0d1e3a;
+      font-size: clamp(14px, 4.2vw, 21px);
+      font-weight: 300;
+      letter-spacing: 0.44em;
+      text-transform: uppercase;
+      text-align: center;
+      opacity: 0;
+    }
+
+    /* Progress bar */
+    .progress-bar {
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 2px; width: 0%;
+      background: linear-gradient(90deg, #aaccf4, #4472c4, #8ab4f8, #4472c4, #aaccf4);
+      opacity: 0.75;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="stage" id="stage">
+
+    <!-- Corner accents -->
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+    <!-- SCENE 1 – Tagline -->
+    <div class="scene" id="s1">
+      <div class="headline" id="s1h1" style="opacity:0;transform:translateY(16px)">
+        Because Every
+      </div>
+      <div class="headline" id="s1h2" style="opacity:0;transform:translateY(16px);margin-top:10px">
+        <em>Byte <span class="accent">Matters.</span></em>
+      </div>
+    </div>
+
+    <!-- SCENE 2 – Apps. Web. UI/UX. -->
+    <div class="scene" id="s2">
+      <div class="pill-row">
+        <span class="pill" id="p1">Apps</span>
+        <span class="pill-dot" id="pd1"></span>
+        <span class="pill" id="p2">Web</span>
+        <span class="pill-dot" id="pd2"></span>
+        <span class="pill" id="p3">UI/UX</span>
+      </div>
+    </div>
+
+    <!-- SCENE 3 – Built for Startups + tech stack -->
+    <div class="scene" id="s3">
+      <div class="headline" id="s3h" style="opacity:0;transform:translateY(14px)">
+        Built for <span class="accent">Startups.</span><br><em>Engineered to Scale.</em>
+      </div>
+      <div class="sub-label" id="s3sub">Flutter · React · Node.js · Kotlin</div>
+    </div>
+
+    <!-- SCENE 4 – Brand Name -->
+    <div class="scene" id="s4">
+      <div class="firm-wrap">
+        <div class="firm-name" id="firmName">BYTE<em>SQUAD</em></div>
+        <div class="firm-divider" id="firmDivider"></div>
+        <div class="firm-tagline" id="firmTagline">Apps · Web · White-Label</div>
+      </div>
+    </div>
+
+    <!-- SCENE 5 – Your Technology Partner -->
+    <div class="scene" id="s5">
+      <div class="partner-text" id="pt">Your Technology Partner</div>
+    </div>
+
+    <div class="accent-line" id="accentLine"></div>
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <script>
+    function ease(t) { return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; }
+
+    function animate(el, from, to, duration, delay, prop, unit = '') {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          const start = performance.now();
+          function step(now) {
+            const t = Math.min((now - start) / duration, 1);
+            const val = from + (to - from) * ease(t);
+            if (prop === 'opacity') el.style.opacity = val;
+            else if (prop === 'translateY') el.style.transform = `translateY(${val}px)`;
+            else if (prop === 'scale') el.style.transform = `scale(${val})`;
+            else if (prop === 'width') el.style.width = val + unit;
+            else el.style[prop] = val + unit;
+            if (t < 1) requestAnimationFrame(step); else resolve();
+          }
+          requestAnimationFrame(step);
+        }, delay);
+      });
+    }
+
+    const fadeIn = (el, d = 600, delay = 0) => animate(el, 0, 1, d, delay, 'opacity');
+    const fadeOut = (el, d = 500, delay = 0) => animate(el, 1, 0, d, delay, 'opacity');
+
+    function slideIn(el, d = 750, delay = 0) {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(18px)';
+      return Promise.all([
+        animate(el, 0, 1, d, delay, 'opacity'),
+        animate(el, 18, 0, d, delay, 'translateY')
+      ]);
+    }
+
+    const showScene = id => { const e = document.getElementById(id); e.style.opacity = 1; e.style.pointerEvents = 'auto'; };
+    const hideScene = id => { const e = document.getElementById(id); e.style.opacity = 0; e.style.pointerEvents = 'none'; };
+
+    let running = false;
+
+    async function startVideo() {
+      if (running) return;
+      running = true;
+
+      // Progress bar
+      const progress = document.getElementById('progressBar');
+      const totalDuration = 20000;
+      const startTime = performance.now();
+      (function tick() {
+        const pct = Math.min(((performance.now() - startTime) / totalDuration) * 100, 100);
+        progress.style.width = pct + '%';
+        if (pct < 100) requestAnimationFrame(tick);
+      })();
+
+      // Accent line reveal
+      fadeIn(document.getElementById('accentLine'), 1400, 300);
+      animate(document.getElementById('accentLine'), 0, 480, 1600, 400, 'width', 'px');
+
+      // ── SCENE 1 (0 – 4.5s) — tagline ──
+      showScene('s1');
+      await slideIn(document.getElementById('s1h1'), 850, 0);
+      await slideIn(document.getElementById('s1h2'), 850, 250);
+      await new Promise(r => setTimeout(r, 2300));
+      await fadeOut(document.getElementById('s1'), 750);
+      hideScene('s1');
+
+      // ── SCENE 2 (4.5 – 8.5s) — Apps · Web · UI/UX ──
+      showScene('s2');
+      await fadeIn(document.getElementById('p1'), 650, 0);
+      await new Promise(r => setTimeout(r, 150));
+      await Promise.all([
+        fadeIn(document.getElementById('pd1'), 350, 0),
+        fadeIn(document.getElementById('p2'), 650, 100),
+      ]);
+      await new Promise(r => setTimeout(r, 150));
+      await Promise.all([
+        fadeIn(document.getElementById('pd2'), 350, 0),
+        fadeIn(document.getElementById('p3'), 650, 100),
+      ]);
+      await new Promise(r => setTimeout(r, 2200));
+      await fadeOut(document.getElementById('s2'), 750);
+      hideScene('s2');
+
+      // ── SCENE 3 (8.5 – 12.5s) — startups + stack ──
+      showScene('s3');
+      await slideIn(document.getElementById('s3h'), 850, 0);
+      await fadeIn(document.getElementById('s3sub'), 700, 500);
+      await new Promise(r => setTimeout(r, 2400));
+      await fadeOut(document.getElementById('s3'), 750);
+      hideScene('s3');
+
+      // ── SCENE 4 (12.5 – 17s) — brand name ──
+      showScene('s4');
+      await slideIn(document.getElementById('firmName'), 900, 0);
+      const div = document.getElementById('firmDivider');
+      div.style.opacity = 0; div.style.width = '0px';
+      await Promise.all([
+        fadeIn(div, 600, 200),
+        animate(div, 0, 160, 700, 300, 'width', 'px'),
+      ]);
+      await fadeIn(document.getElementById('firmTagline'), 650, 100);
+      await new Promise(r => setTimeout(r, 2600));
+      await fadeOut(document.getElementById('s4'), 750);
+      hideScene('s4');
+
+      // ── SCENE 5 (17 – 20s) ──
+      showScene('s5');
+      await slideIn(document.getElementById('pt'), 850, 0);
+      await new Promise(r => setTimeout(r, 2200));
+      await fadeOut(document.getElementById('s5'), 1000);
+      await fadeOut(document.getElementById('accentLine'), 900);
+      hideScene('s5');
+
+      // Loop infinitely
+      setTimeout(() => {
+        restartVideo();
+        setTimeout(startVideo, 200);
+      }, 1000);
+    }
+
+    function restartVideo() {
+      running = false;
+      ['s1', 's2', 's3', 's4', 's5'].forEach(id => {
+        document.getElementById(id).style.opacity = 0;
+        document.getElementById(id).style.pointerEvents = 'none';
+      });
+      ['s1h1', 's1h2', 's3h', 's3sub', 'pt', 'firmName'].forEach(id => {
+        const e = document.getElementById(id);
+        e.style.opacity = 0; e.style.transform = 'translateY(18px)';
+      });
+      ['p1', 'p2', 'p3', 'pd1', 'pd2', 'firmTagline'].forEach(id => {
+        document.getElementById(id).style.opacity = 0;
+      });
+      const div = document.getElementById('firmDivider');
+      div.style.opacity = 0; div.style.width = '0px';
+      document.getElementById('accentLine').style.opacity = 0;
+      document.getElementById('accentLine').style.width = '0';
+      document.getElementById('progressBar').style.width = '0%';
+    }
+
+    // Autoplay on load
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(startVideo, 500);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import BrandBoard from "@/components/BrandBoard";
 
 // No page title here — the home page uses the root default:
 // "byteSquad — Because every byte matters"
@@ -19,7 +18,11 @@ export default function HomePage() {
       <section className="about-section">
         <div className="container about-container">
           <div className="about-image animate-fade-up">
-            <BrandBoard />
+            <div className="video-wrapper-responsive">
+              <iframe src="/videos/bytesquad-video.html" allowFullScreen scrolling="no" style={{ border: "none" }}
+                title="byteSquad Brand Video">
+              </iframe>
+            </div>
           </div>            <div className="about-content">
             <span className="about-subtitle animate-fade-up">Who We Are</span>
             <h2 className="animate-fade-up delay-100">About byteSquad</h2>
