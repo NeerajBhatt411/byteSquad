@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>byteSquad – Brand Video</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -15,14 +17,14 @@
       justify-content: center;
       overflow: hidden;
       height: 100vh;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     }
 
     .stage {
       position: relative;
       width: 100%;
       height: 100%;
-      background: #f4f8fc;
+      background: #F8FAFC;
       overflow: hidden;
     }
 
@@ -32,19 +34,19 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse at 20% 25%, rgba(180, 215, 255, 0.30) 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 80%, rgba(100, 160, 230, 0.12) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 110%, rgba(68, 114, 196, 0.06) 0%, transparent 60%);
+        radial-gradient(ellipse at 20% 25%, rgba(147, 197, 253, 0.30) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 80%, rgba(96, 165, 250, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 110%, rgba(59, 130, 246, 0.06) 0%, transparent 60%);
       pointer-events: none;
       z-index: 0;
     }
 
     /* Thin corner bracket marks */
     .corner { position: absolute; width: 16px; height: 16px; opacity: 0.35; }
-    .corner-tl { top: 18px; left: 18px; border-top: 1px solid #4472c4; border-left: 1px solid #4472c4; }
-    .corner-tr { top: 18px; right: 18px; border-top: 1px solid #4472c4; border-right: 1px solid #4472c4; }
-    .corner-bl { bottom: 18px; left: 18px; border-bottom: 1px solid #4472c4; border-left: 1px solid #4472c4; }
-    .corner-br { bottom: 18px; right: 18px; border-bottom: 1px solid #4472c4; border-right: 1px solid #4472c4; }
+    .corner-tl { top: 18px; left: 18px; border-top: 1px solid #3B82F6; border-left: 1px solid #3B82F6; }
+    .corner-tr { top: 18px; right: 18px; border-top: 1px solid #3B82F6; border-right: 1px solid #3B82F6; }
+    .corner-bl { bottom: 18px; left: 18px; border-bottom: 1px solid #3B82F6; border-left: 1px solid #3B82F6; }
+    .corner-br { bottom: 18px; right: 18px; border-bottom: 1px solid #3B82F6; border-right: 1px solid #3B82F6; }
 
     /* Blue accent divider line */
     .accent-line {
@@ -54,7 +56,7 @@
       transform: translateX(-50%);
       width: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, #4472c4, #8ab4f8, #4472c4, transparent);
+      background: linear-gradient(90deg, transparent, #3B82F6, #93C5FD, #3B82F6, transparent);
       opacity: 0;
       z-index: 1;
     }
@@ -74,7 +76,7 @@
 
     /* ── TYPOGRAPHY ── */
     .headline {
-      color: #0d1e3a;
+      color: #0F172A;
       font-size: clamp(19px, 6vw, 34px);
       font-weight: 300;
       letter-spacing: 0.14em;
@@ -83,8 +85,8 @@
       text-transform: uppercase;
     }
 
-    .headline em { font-style: normal; font-weight: 600; color: #0d1e3a; }
-    .headline .accent { color: #2b5faa; font-weight: 500; }
+    .headline em { font-style: normal; font-weight: 600; color: #0F172A; }
+    .headline .accent { color: #2563EB; font-weight: 500; }
 
     .pill-row {
       display: flex;
@@ -95,7 +97,7 @@
     }
 
     .pill {
-      color: #1a3560;
+      color: #1E3A8A;
       font-size: clamp(13px, 3.6vw, 19px);
       font-weight: 300;
       letter-spacing: 0.28em;
@@ -105,45 +107,44 @@
 
     .pill-dot {
       width: 4px; height: 4px; border-radius: 50%;
-      background: #4472c4; opacity: 0; flex-shrink: 0;
+      background: #3B82F6; opacity: 0; flex-shrink: 0;
     }
 
     .sub-label {
       margin-top: 20px;
       font-size: clamp(9px, 2.2vw, 11px);
       letter-spacing: 0.45em;
-      color: #4472c4;
+      color: #3B82F6;
       text-transform: uppercase;
       opacity: 0;
       font-weight: 500;
       text-align: center;
     }
 
-    /* Scene 4 – brand name */
+    /* Scene 4 – brand logo */
     .firm-wrap { display: flex; flex-direction: column; align-items: center; }
 
     .firm-name {
       opacity: 0;
-      color: #0d1e3a;
-      font-size: clamp(17px, 5.2vw, 30px);
-      font-weight: 300;
-      letter-spacing: 0.44em;
-      text-transform: uppercase;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(10px, 2.4vw, 16px);
     }
 
-    .firm-name em { font-style: normal; font-weight: 600; color: #2b5faa; }
+    .firm-name img.mark { height: clamp(40px, 10vw, 58px); width: auto; }
+    .firm-name img.word { height: clamp(24px, 6vw, 34px); width: auto; }
 
     .firm-divider {
       width: 0; height: 1px;
-      background: linear-gradient(90deg, transparent, #4472c4, #8ab4f8, #4472c4, transparent);
+      background: linear-gradient(90deg, transparent, #3B82F6, #93C5FD, #3B82F6, transparent);
       margin: 18px auto;
       opacity: 0;
     }
 
     .firm-tagline {
       opacity: 0;
-      color: #4472c4;
+      color: #3B82F6;
       font-size: clamp(9px, 2.2vw, 10.5px);
       font-weight: 500;
       letter-spacing: 0.6em;
@@ -153,7 +154,7 @@
 
     /* Scene 5 */
     .partner-text {
-      color: #0d1e3a;
+      color: #0F172A;
       font-size: clamp(14px, 4.2vw, 21px);
       font-weight: 300;
       letter-spacing: 0.44em;
@@ -167,7 +168,7 @@
       position: absolute;
       bottom: 0; left: 0;
       height: 2px; width: 0%;
-      background: linear-gradient(90deg, #aaccf4, #4472c4, #8ab4f8, #4472c4, #aaccf4);
+      background: linear-gradient(90deg, #BFDBFE, #3B82F6, #93C5FD, #3B82F6, #BFDBFE);
       opacity: 0.75;
       z-index: 2;
     }
@@ -216,7 +217,10 @@
     <!-- SCENE 4 – Brand Name -->
     <div class="scene" id="s4">
       <div class="firm-wrap">
-        <div class="firm-name" id="firmName">BYTE<em>SQUAD</em></div>
+        <div class="firm-name" id="firmName">
+          <img class="mark" src="/brand/byteSquad-icon-tight.svg" alt="">
+          <img class="word" src="/brand/byteSquad-wordmark-tight.svg" alt="byteSquad">
+        </div>
         <div class="firm-divider" id="firmDivider"></div>
         <div class="firm-tagline" id="firmTagline">Apps · Web · White-Label</div>
       </div>
