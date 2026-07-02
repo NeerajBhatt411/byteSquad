@@ -16,7 +16,7 @@ const SERVICES = [
   { label: "E-commerce", desc: "Stores built to sell", href: "/services#ecommerce", img: "/menu-icons/ecommerce.svg" },
   { label: "Custom Software", desc: "Dashboards & internal tools", href: "/services#custom", img: "/menu-icons/custom.svg" },
   { label: "WordPress", desc: "Themes, plugins & CMS", href: "/services#wordpress", img: "/menu-icons/wordpress.svg" },
-  { label: "SaaS Development", desc: "Multi-tenant cloud platforms", href: "/services#saas", img: "/menu-icons/saas.svg" },
+  { label: "ERP Solutions", desc: "Operations, inventory & finance", href: "/services#erp", img: "/menu-icons/erp.svg" },
 ];
 
 const PRODUCTS = [

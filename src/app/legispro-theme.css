@@ -4637,8 +4637,8 @@ body {
 .dd-foot a svg{ transition:transform .18s ease; }
 .dd-foot a:hover svg{ transform:translateX(3px); }
 
-.dd-services{ width:min(620px, calc(100vw - 48px)); }
-.dd-products{ width:min(700px, calc(100vw - 48px)); }
+.dd-services{ width:min(680px, calc(100vw - 48px)); }
+.dd-products{ width:min(680px, calc(100vw - 48px)); }
 
 /* row hover tinted per product */
 .p-taxi:hover{ background:#fffaf0; }
