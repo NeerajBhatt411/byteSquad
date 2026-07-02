@@ -3,6 +3,16 @@ import nextVitals from "eslint-config-next/core-web-vitals";
 
 const eslintConfig = defineConfig([
   ...nextVitals,
+  {
+    rules: {
+      // Straight quotes/apostrophes in copy are fine — React escapes them.
+      "react/no-unescaped-entities": "off",
+      // This is a faithful 1:1 port of an existing site — plain <img>/<a> tags
+      // are used to reproduce the original markup and navigation exactly.
+      "@next/next/no-img-element": "off",
+      "@next/next/no-html-link-for-pages": "off",
+    },
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
