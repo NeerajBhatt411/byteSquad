@@ -1708,9 +1708,9 @@ body {
         background: conic-gradient(from 0deg,
                 transparent 0deg,
                 transparent 280deg,
-                #A07CFE 310deg,
-                #FE8FB5 335deg,
-                #FFBE7B 360deg);
+                #3B82F6 310deg,
+                #60A5FA 335deg,
+                #93C5FD 360deg);
         top: 50%;
         left: 50%;
         z-index: -2;
@@ -1731,7 +1731,7 @@ body {
 
     .client-card:hover {
         transform: translateY(-6px);
-        box-shadow: 0 12px 30px -5px rgba(160, 124, 254, 0.15);
+        box-shadow: 0 12px 30px -5px rgba(59, 130, 246, 0.15);
     }
 
     .client-card:hover::before {
@@ -1740,7 +1740,7 @@ body {
 
     .client-card:hover .client-number {
         -webkit-text-stroke: 0px transparent;
-        background: linear-gradient(135deg, #A07CFE, #FE8FB5);
+        background: linear-gradient(135deg, #3B82F6, #60A5FA);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -4923,3 +4923,11 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
 .why-choose-card h3 { color:#0F172A; }
 .why-choose-card-body p { color:#475569; }
 
+
+/* byteSquad — Why byteSquad icon + card polish */
+.why-choose-card { position:relative; overflow:hidden; }
+.why-choose-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#3B82F6,#60A5FA); transform:scaleX(0); transform-origin:left; transition:transform .4s ease; }
+.why-choose-card:hover::before { transform:scaleX(1); }
+.why-choose-icon { width:58px; height:58px; border-radius:15px; background:linear-gradient(135deg,#3B82F6,#60A5FA); border:none; color:#ffffff; box-shadow:0 10px 20px -8px rgba(59,130,246,0.55); }
+.why-choose-icon svg { width:28px; height:28px; }
+.why-choose-card:hover .why-choose-icon { background:linear-gradient(135deg,#2563EB,#3B82F6); transform:rotate(-5deg) scale(1.1); color:#fff; }

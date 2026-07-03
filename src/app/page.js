@@ -38,9 +38,8 @@ const WHY = [
     desc: "We tell you exactly what we're building with and why — no black boxes, no jargon.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <circle cx="12" cy="12" r="5"></circle>
-        <circle cx="12" cy="12" r="1"></circle>
+        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
       </svg>
     ),
   },
@@ -49,9 +48,10 @@ const WHY = [
     desc: "One team owns the experience end to end, so nothing gets lost in handoff.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-        <polyline points="2 17 12 22 22 17"></polyline>
-        <polyline points="2 12 12 17 22 12"></polyline>
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
       </svg>
     ),
   },
@@ -60,10 +60,10 @@ const WHY = [
     desc: "Go fully custom, or move faster with a ready-made white-label product.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="6" y1="3" x2="6" y2="15"></line>
-        <circle cx="18" cy="6" r="3"></circle>
-        <circle cx="6" cy="18" r="3"></circle>
-        <path d="M18 9a9 9 0 0 1-9 9"></path>
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+        <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
       </svg>
     ),
   },
@@ -72,8 +72,10 @@ const WHY = [
     desc: "Scalable architecture and clean foundations that grow with your business.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="23 6 13.5 15.5 8.5 10.5 2 17"></polyline>
-        <polyline points="16 6 23 6 23 13"></polyline>
+        <line x1="3" y1="21" x2="21" y2="21"></line>
+        <rect x="5" y="11" width="3.4" height="8" rx="1"></rect>
+        <rect x="10.3" y="7" width="3.4" height="12" rx="1"></rect>
+        <rect x="15.6" y="3" width="3.4" height="16" rx="1"></rect>
       </svg>
     ),
   },
