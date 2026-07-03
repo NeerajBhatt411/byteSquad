@@ -79,7 +79,11 @@ const WHY = [
   },
 ];
 
-const TECH = ["Flutter", "React", "Node.js", "Express", "Kotlin", "Java", "WordPress", "Figma"];
+const TECH = [
+  { key: "flutter", name: "Flutter" }, { key: "react", name: "React" }, { key: "nodejs", name: "Node.js" },
+  { key: "express", name: "Express" }, { key: "kotlin", name: "Kotlin" }, { key: "java", name: "Java" },
+  { key: "wordpress", name: "WordPress" }, { key: "figma", name: "Figma" },
+];
 
 const DELAYS = ["delay-100", "delay-200", "delay-300", "delay-400"];
 const arrow = (
@@ -93,14 +97,25 @@ export default function HomePage() {
   return (
     <>
       {/* ===== Hero ===== */}
-      <section className="hero-section">
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h2 className="animate-fade-up">Software That Moves<br />Your Business Forward</h2>
-          <p className="animate-fade-up delay-200">We design and build custom apps, websites and software — plus ready-to-launch white-label products you can release under your own brand.</p>
-          <div className="hero-actions animate-fade-up delay-400">
-            <Link href="/contact" className="btn-primary btn-large">Start a Project</Link>
-            <Link href="/services" className="btn-ghost">Explore Services</Link>
+      <section className="bs-hero">
+        <div className="bs-hero-glow" aria-hidden="true"></div>
+        <div className="bs-hero-gridlines" aria-hidden="true"></div>
+        <div className="bs-hero-inner">
+          <span className="bs-hero-badge animate-fade-up">Software Development Company</span>
+          <h1 className="bs-hero-title animate-fade-up delay-100">
+            Software That Moves<br /><span className="grad">Your Business Forward</span>
+          </h1>
+          <p className="bs-hero-sub animate-fade-up delay-200">We design and build custom apps, websites and software — plus ready-to-launch white-label products you can release under your own brand.</p>
+          <div className="bs-hero-actions animate-fade-up delay-300">
+            <Link href="/contact" className="bs-btn-glow">Start a Project</Link>
+            <Link href="/services" className="bs-btn-ghost-d">Explore Services {arrow}</Link>
+          </div>
+          <div className="bs-hero-logos animate-fade-up delay-400">
+            {["flutter", "react", "nodejs", "kotlin", "java", "figma", "wordpress"].map((t) => (
+              <span key={t} className="bs-hero-logo" title={TECH_NAME[t]}>
+                <img src={`/tech/${t}.svg`} alt={TECH_NAME[t]} loading="lazy" />
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -234,7 +249,7 @@ export default function HomePage() {
         </div>
         <div className="bs-tech-chips animate-fade-up delay-100">
           {TECH.map((t) => (
-            <span key={t} className="bs-chip">{t}</span>
+            <span key={t.key} className="bs-chip"><img src={`/tech/${t.key}.svg`} alt="" loading="lazy" />{t.name}</span>
           ))}
         </div>
       </section>
