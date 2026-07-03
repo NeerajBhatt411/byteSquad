@@ -4971,3 +4971,39 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
 .client-card::before, .client-card::after { content:none !important; display:none !important; }
 .client-card:hover { transform:translateY(-6px); border-color:#BFDBFE; box-shadow:0 18px 30px -12px rgba(59,130,246,0.22); }
 .client-card:hover .client-number { -webkit-text-stroke:0; background:linear-gradient(135deg,#3B82F6,#60A5FA); -webkit-background-clip:text; background-clip:text; color:transparent; transform:scale(1.05); }
+
+/* ==========================================================================
+   byteSquad — inner page hero + Services detail
+   ========================================================================== */
+.bs-page-hero {
+  position:relative; overflow:hidden; text-align:center;
+  padding:clamp(4rem,9vw,6.5rem) 1.25rem clamp(3rem,6vw,4.5rem);
+  background:
+    radial-gradient(700px 360px at 12% 8%, rgba(96,165,250,0.18), transparent 60%),
+    radial-gradient(680px 380px at 92% 92%, rgba(59,130,246,0.14), transparent 62%),
+    linear-gradient(180deg,#ffffff 0%,#f3f8ff 100%);
+}
+.bs-page-hero-inner { max-width:820px; margin:0 auto; position:relative; z-index:1; }
+.bs-page-hero h1 { font-size:clamp(2.1rem,5.5vw,3.4rem); font-weight:800; line-height:1.1; letter-spacing:-0.025em; color:#0F172A; margin:0.9rem 0 1.1rem; }
+.bs-page-hero p { font-size:clamp(1rem,2.2vw,1.18rem); color:#475569; line-height:1.65; max-width:680px; margin:0 auto 2rem; }
+.bs-page-hero-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+.btn-ghost-b { display:inline-flex; align-items:center; gap:8px; padding:0.875rem 2rem; border-radius:12px; font-weight:600; font-size:1rem; text-decoration:none; color:#1E293B; background:#fff; border:1px solid #E2E8F0; box-shadow:0 2px 6px -2px rgba(16,24,40,0.08); transition:all 0.3s ease; }
+.btn-ghost-b:hover { transform:translateY(-3px); border-color:#BFDBFE; box-shadow:0 10px 20px -6px rgba(59,130,246,0.22); }
+
+.bs-svc-detail { padding:clamp(2.5rem,6vw,4rem) 1.25rem clamp(3.5rem,8vw,5.5rem); background:#ffffff; }
+.bs-svc-detail .bs-platforms { margin-top:0; }
+.bs-srv-grid { display:grid; grid-template-columns:1fr; gap:1.75rem; max-width:1120px; margin:0 auto; }
+@media (min-width:768px){ .bs-srv-grid{ grid-template-columns:repeat(2,1fr); } }
+.bs-srv-card {
+  scroll-margin-top:100px; display:flex; flex-direction:column; gap:0.85rem;
+  background:linear-gradient(180deg,#ffffff 0%,#f7faff 100%); border:1px solid #E8EEF6; border-radius:20px;
+  padding:2rem 1.9rem; box-shadow:0 1px 2px rgba(16,24,40,0.04), 0 10px 22px -8px rgba(16,24,40,0.10);
+  transition:transform 0.4s cubic-bezier(0.165,0.84,0.44,1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.bs-srv-card:hover { transform:translateY(-6px); border-color:#BFDBFE; box-shadow:0 22px 40px -16px rgba(59,130,246,0.22); }
+.bs-srv-card h3 { font-size:1.35rem; font-weight:800; color:#0F172A; margin:0.2rem 0 0; }
+.bs-srv-desc { color:#475569; font-size:0.98rem; line-height:1.6; margin:0; }
+.bs-srv-list { list-style:none; padding:0; margin:0.4rem 0 0; display:grid; gap:0.6rem; }
+.bs-srv-list li { position:relative; padding-left:1.7rem; color:#475569; font-size:0.94rem; line-height:1.5; }
+.bs-srv-list li::before { content:''; position:absolute; left:0; top:2px; width:18px; height:18px; border-radius:50%; background:#EAF2FF; }
+.bs-srv-list li::after { content:''; position:absolute; left:5px; top:6px; width:8px; height:5px; border-left:2px solid #2563EB; border-bottom:2px solid #2563EB; transform:rotate(-45deg); }
