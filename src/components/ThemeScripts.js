@@ -41,11 +41,13 @@ export default function ThemeScripts() {
 
     submenuItems.forEach((item) => {
       const trigger = item.querySelector(":scope > a");
-      const panel = item.querySelector(".mega-menu");
-      const panelLinks = item.querySelectorAll(".mega-menu a");
+      const panel = item.querySelector(".mega-menu, .bs-dropdown");
+      const panelLinks = item.querySelectorAll(".mega-menu a, .bs-dropdown a");
 
       if (trigger) {
         const onTriggerClick = (event) => {
+          // Desktop: the dropdown opens on hover — let the link navigate.
+          if (!window.matchMedia("(max-width: 900px)").matches) return;
           event.preventDefault();
           event.stopPropagation();
           const isOpen = item.classList.contains("submenu-active");
@@ -70,6 +72,11 @@ export default function ThemeScripts() {
         panelLinks.forEach((link) => {
           const onLinkClick = () => {
             closeAllSubmenus();
+            if (window.matchMedia("(max-width: 900px)").matches) {
+              if (nav) nav.classList.remove("active");
+              if (toggle) toggle.classList.remove("active");
+              document.body.classList.remove("menu-open");
+            }
           };
           link.addEventListener("click", onLinkClick);
           cleanups.push(() => link.removeEventListener("click", onLinkClick));

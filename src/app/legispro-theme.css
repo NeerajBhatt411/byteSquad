@@ -4651,12 +4651,15 @@ body {
 @media (max-width:900px){
   .bs-dropdown{
     position:static; opacity:1; visibility:visible; transform:none;
-    box-shadow:none; border:none; border-radius:0; padding:2px 0 10px;
+    box-shadow:none; border:none; border-radius:0;
+    max-height:0; overflow:hidden; padding:0;
+    transition:max-height .32s ease;
   }
+  .menu-item-has-children.submenu-active > .bs-dropdown{ max-height:1600px; padding:2px 0 12px; }
   .bs-dropdown::before{ display:none; }
   .dd-services,.dd-products{ width:auto; }
   .dd-grid{ grid-template-columns:1fr; gap:2px; }
-  .dd-item{ padding:8px 10px; }
+  .dd-item{ padding:10px 10px; }
   .dd-item .ic{ width:38px; height:38px; border-radius:11px; }
   .dd-eyebrow,.dd-foot{ display:none; }
 }
