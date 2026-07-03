@@ -5022,3 +5022,32 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
 .bs-stack-line { text-align:center; color:#64748B; font-size:0.98rem; margin:3rem auto 0; }
 .bs-stack-line b { color:#0F172A; font-weight:700; }
 #products { scroll-margin-top:90px; }
+
+/* ==========================================================================
+   byteSquad — White-Label product (detail) pages
+   ========================================================================== */
+.bs-prod-badge { width:76px; height:76px; border-radius:20px; background:#fff; border:1px solid #EEF2F7; box-shadow:0 14px 28px -10px rgba(16,24,40,0.25); display:inline-flex; align-items:center; justify-content:center; margin-bottom:0.75rem; }
+.bs-prod-badge img { width:44px; height:44px; display:block; }
+.bs-prod-badge.p-taxi{ background:#FFF7ED } .bs-prod-badge.p-ott{ background:#FEF2F3 } .bs-prod-badge.p-dating{ background:#FDF2F8 }
+.bs-prod-badge.p-crm{ background:#F5F3FF } .bs-prod-badge.p-school{ background:#ECFDF5 } .bs-prod-badge.p-lms{ background:#EFF6FF }
+
+.bs-prod-overview { padding:clamp(3rem,7vw,5rem) 1.25rem; background:#ffffff; }
+.bs-prod-wrap { max-width:840px; margin:0 auto; text-align:center; }
+.bs-prod-lead { font-size:clamp(1.05rem,2.3vw,1.25rem); color:#334155; line-height:1.7; margin:1rem auto 2rem; }
+.bs-prod-yg { max-width:660px; margin:0 auto; text-align:left; display:grid; gap:0.7rem; }
+@media (min-width:560px){ .bs-prod-yg{ grid-template-columns:repeat(2,1fr); } }
+
+.bs-mod-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; max-width:1000px; margin:0 auto; }
+@media (min-width:700px){ .bs-mod-grid{ grid-template-columns:repeat(2,1fr); } }
+.bs-mod-card { background:linear-gradient(180deg,#ffffff,#f7faff); border:1px solid #E8EEF6; border-radius:18px; padding:1.75rem 1.6rem; box-shadow:0 6px 16px -6px rgba(16,24,40,0.10); transition:transform .35s cubic-bezier(0.165,0.84,0.44,1), box-shadow .35s ease, border-color .35s ease; }
+.bs-mod-card:hover { transform:translateY(-5px); border-color:#BFDBFE; box-shadow:0 18px 32px -14px rgba(59,130,246,0.22); }
+.bs-mod-card h3 { font-size:1.15rem; font-weight:700; color:#0F172A; margin:0 0 0.55rem; display:flex; align-items:center; gap:0.6rem; }
+.bs-mod-card h3::before { content:''; width:9px; height:9px; border-radius:50%; background:linear-gradient(135deg,#3B82F6,#60A5FA); flex-shrink:0; }
+.bs-mod-card p { color:#64748B; font-size:0.95rem; line-height:1.6; margin:0; }
+
+.bs-prod-tech { padding:clamp(2.5rem,6vw,4rem) 1.25rem clamp(3.5rem,8vw,5rem); background:#F8FAFC; }
+.bs-prod-tech-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; max-width:1000px; margin:0 auto; }
+@media (min-width:768px){ .bs-prod-tech-grid{ grid-template-columns:1fr 1fr; } }
+.bs-prod-tech-card, .bs-prod-brand-card { background:#fff; border:1px solid #E8EEF6; border-radius:20px; padding:2rem 1.9rem; box-shadow:0 6px 16px -6px rgba(16,24,40,0.08); }
+.bs-prod-tech-card p { color:#334155; font-size:1rem; line-height:1.7; margin:0.7rem 0 0; }
+.bs-prod-brand-card .bs-srv-list { margin-top:0.9rem; }
