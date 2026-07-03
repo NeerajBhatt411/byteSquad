@@ -5118,3 +5118,10 @@ a.bs-reach-item:hover { border-color:#BFDBFE; box-shadow:0 10px 20px -8px rgba(5
 .bs-form-msg { padding:0.9rem 1rem; border-radius:12px; font-size:0.92rem; margin-bottom:1.25rem; }
 .bs-form-msg.ok { background:#ECFDF5; border:1px solid #A7F3D0; color:#065F46; }
 .bs-form-msg a { color:inherit; font-weight:700; }
+
+/* Mobile dropdown: bulletproof reset (was inheriting desktop absolute/centered/2-col) */
+@media (max-width:900px){
+  .bs-dropdown{ position:static !important; left:auto !important; right:auto !important; top:auto !important; transform:none !important; width:auto !important; max-width:100% !important; box-shadow:none !important; }
+  .dd-services, .dd-products{ width:auto !important; }
+  .dd-grid{ grid-template-columns:1fr !important; gap:2px !important; }
+}
