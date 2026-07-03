@@ -5068,3 +5068,12 @@ html.reveal-instant .animate-fade-up { opacity:1 !important; transform:none !imp
   .bs-dropdown .dd-item .d{ font-size:0.78rem; }
   .menu-item-has-children.submenu-active > .bs-dropdown{ border-left:2px solid #E5EAF2; margin-left:6px; }
 }
+
+/* Mobile: kill horizontal overflow + right-size hero headings (fixes shifted/clipped layout on real phones) */
+html { overflow-x: clip; }
+@media (max-width: 600px){
+  .bs-hero-title, .bs-page-hero h1 { font-size: clamp(1.6rem, 7vw, 2.3rem); letter-spacing:-0.01em; }
+  .bs-hero-title br, .bs-page-hero h1 br { display: none; }
+  .bs-hero-sub { font-size: 1.02rem; }
+  .bs-page-hero p, .bs-hero-sub { padding-left:2px; padding-right:2px; }
+}
