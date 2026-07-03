@@ -149,7 +149,9 @@ export default function HomePage() {
             <Link key={s.href} href={s.href} className={`bs-svc-card animate-fade-up ${DELAYS[i % 4]}`}>
               <span className="bs-svc-logos">
                 {s.tech.map((t) => (
-                  <img key={t} className="bs-tlogo" src={`/tech/${t}.svg`} alt={TECH_NAME[t]} title={TECH_NAME[t]} loading="lazy" />
+                  <span key={t} className="bs-tlogo-tile" title={TECH_NAME[t]}>
+                    <img className="bs-tlogo" src={`/tech/${t}.svg`} alt={TECH_NAME[t]} loading="lazy" />
+                  </span>
                 ))}
               </span>
               <span className="bs-svc-t">{s.title}</span>
