@@ -5077,3 +5077,44 @@ html { overflow-x: clip; }
   .bs-hero-sub { font-size: 1.02rem; }
   .bs-page-hero p, .bs-hero-sub { padding-left:2px; padding-right:2px; }
 }
+
+/* ==========================================================================
+   byteSquad — Contact page + form
+   ========================================================================== */
+.bs-contact { padding:clamp(2.5rem,6vw,4.5rem) 1.25rem clamp(3.5rem,8vw,5.5rem); background:#ffffff; }
+.bs-contact-grid { display:grid; grid-template-columns:1fr; gap:2.5rem; max-width:1080px; margin:0 auto; }
+@media (min-width:900px){ .bs-contact-grid{ grid-template-columns:0.85fr 1.15fr; gap:3rem; align-items:start; } }
+.bs-contact-left h2 { font-size:clamp(1.55rem,3.5vw,2rem); font-weight:800; color:#0F172A; margin:0 0 1.5rem; }
+.bs-steps-list { list-style:none; padding:0; margin:0 0 2.5rem; display:grid; gap:1.25rem; }
+.bs-steps-list li { display:flex; gap:1rem; align-items:flex-start; }
+.bs-steps-n { flex:0 0 auto; width:38px; height:38px; border-radius:11px; background:linear-gradient(135deg,#3B82F6,#60A5FA); color:#fff; font-weight:800; font-size:0.9rem; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 16px -6px rgba(59,130,246,0.5); }
+.bs-steps-list b { color:#0F172A; font-size:1.02rem; }
+.bs-steps-list p { color:#64748B; font-size:0.93rem; line-height:1.5; margin:0.15rem 0 0; }
+.bs-reach h3 { font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--primary-color); font-weight:700; margin:0 0 1rem; }
+.bs-reach-item { display:flex; gap:0.9rem; align-items:center; padding:0.85rem 1rem; border:1px solid #E8EEF6; border-radius:14px; margin-bottom:0.75rem; text-decoration:none; background:#fff; transition:all .25s ease; }
+a.bs-reach-item:hover { border-color:#BFDBFE; box-shadow:0 10px 20px -8px rgba(59,130,246,0.22); transform:translateY(-2px); }
+.bs-reach-ic { width:40px; height:40px; border-radius:11px; background:#F0F7FF; color:var(--primary-color); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.bs-reach-item span { font-size:0.9rem; color:#475569; line-height:1.45; }
+.bs-reach-item span b { color:#0F172A; font-size:0.95rem; }
+.bs-reach-item.is-soon .bs-reach-ic { background:#F1F5F9; color:#94A3B8; }
+.bs-reach-item.is-soon span { color:#94A3B8; }
+.bs-reach-item.is-soon span b { color:#64748B; }
+
+.bs-form-card { background:linear-gradient(180deg,#ffffff,#f7faff); border:1px solid #E8EEF6; border-radius:22px; padding:clamp(1.5rem,4vw,2.4rem); box-shadow:0 12px 34px -16px rgba(16,24,40,0.18); }
+.bs-form-card > h2 { font-size:clamp(1.35rem,3.2vw,1.75rem); font-weight:800; color:#0F172A; margin:0 0 0.35rem; }
+.bs-form-sub { color:#64748B; font-size:0.95rem; margin:0 0 1.5rem; }
+.bs-form-row { display:grid; grid-template-columns:1fr; gap:1.1rem; margin-bottom:1.1rem; }
+@media (min-width:560px){ .bs-form-row{ grid-template-columns:1fr 1fr; } }
+.bs-field { display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1.1rem; }
+.bs-form-row .bs-field { margin-bottom:0; }
+.bs-field label { font-size:0.85rem; font-weight:600; color:#334155; }
+.bs-field label .opt { color:#94A3B8; font-weight:400; }
+.bs-field input, .bs-field select, .bs-field textarea { width:100%; padding:0.75rem 0.9rem; border:1px solid #D9E2EE; border-radius:11px; font:inherit; font-size:0.95rem; color:#0F172A; background:#fff; transition:border-color .2s ease, box-shadow .2s ease; }
+.bs-field input::placeholder, .bs-field textarea::placeholder { color:#94A3B8; }
+.bs-field input:focus, .bs-field select:focus, .bs-field textarea:focus { outline:none; border-color:#3B82F6; box-shadow:0 0 0 3px rgba(59,130,246,0.15); }
+.bs-field textarea { resize:vertical; min-height:120px; }
+.bs-form .btn-primary { border:none; cursor:pointer; margin-top:0.25rem; }
+.bs-form-note { font-size:0.82rem; color:#94A3B8; margin:0.9rem 0 0; }
+.bs-form-msg { padding:0.9rem 1rem; border-radius:12px; font-size:0.92rem; margin-bottom:1.25rem; }
+.bs-form-msg.ok { background:#ECFDF5; border:1px solid #A7F3D0; color:#065F46; }
+.bs-form-msg a { color:inherit; font-weight:700; }

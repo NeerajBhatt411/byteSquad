@@ -2,86 +2,73 @@
 
 import { useState } from "react";
 
+const SERVICES = [
+  "App Development", "Web Development", "Backend Development", "UI/UX Design",
+  "E-commerce", "Custom Software", "WordPress", "ERP Solutions",
+  "White-Label — Taxi App", "White-Label — OTT / Streaming", "White-Label — Dating App",
+  "White-Label — CRM", "White-Label — School Management", "White-Label — LMS",
+  "Not sure yet",
+];
+
 export default function ContactFormClient() {
-  const [status, setStatus] = useState("");
+  const [sent, setSent] = useState(false);
 
-  async function handleSubmit(event) {
+  // No backend — compose an email to hello@bytesquad.com with the details.
+  function handleSubmit(event) {
     event.preventDefault();
-    const form = event.currentTarget;
-    const data = new FormData(form);
-
-    const payload = {
-      name: data.get("fullName") || "",
-      email: data.get("email") || "",
-      phone: data.get("phone") || "",
-      subject: data.get("company") || "",
-      message: data.get("message") || "",
-    };
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      let result = {};
-      try {
-        result = await response.json();
-      } catch {
-        result = {};
-      }
-
-      const nextStatus = result.status || (response.ok ? "success" : "error");
-      setStatus(nextStatus);
-
-      if (nextStatus === "success") {
-        form.reset();
-      }
-    } catch {
-      setStatus("error");
-    }
+    const data = new FormData(event.currentTarget);
+    const service = data.get("service") || "a project";
+    const subject = `New enquiry — ${service}`;
+    const body =
+      `Name: ${data.get("name") || ""}\n` +
+      `Email: ${data.get("email") || ""}\n` +
+      `Phone: ${data.get("phone") || ""}\n` +
+      `Interested in: ${data.get("service") || ""}\n\n` +
+      `${data.get("message") || ""}`;
+    window.location.href = `mailto:hello@bytesquad.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSent(true);
   }
 
   return (
-    <form action="" method="POST" className="light-query-form" onSubmit={handleSubmit}>
-      {status === "success" && (
-        <div className="form-success">Thank you! Your inquiry has been sent successfully.</div>
-      )}
-      {status === "error" && (
-        <div className="form-error">Sorry, there was an error sending your message. Please try again later.</div>
-      )}
-      {status === "invalid" && (
-        <div className="form-error">Please provide a valid name and email address.</div>
+    <form className="bs-form" onSubmit={handleSubmit}>
+      {sent && (
+        <div className="bs-form-msg ok">
+          Opening your email app… If nothing happens, write to us at <a href="mailto:hello@bytesquad.com">hello@bytesquad.com</a>. 🎉
+        </div>
       )}
 
-      <div className="form-group form-full">
-        <label htmlFor="fullName">Full Name</label>
-        <input type="text" id="fullName" name="fullName" placeholder="Your name" required />
-      </div>
-
-      <div className="form-row">
-        <div className="form-group">
+      <div className="bs-form-row">
+        <div className="bs-field">
+          <label htmlFor="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+        <div className="bs-field">
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@company.com" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
+          <input id="email" name="email" type="email" placeholder="you@company.com" required />
         </div>
       </div>
 
-      <div className="form-group form-full">
-        <label htmlFor="company">Company</label>
-        <input type="text" id="company" name="company" placeholder="Company name" />
+      <div className="bs-form-row">
+        <div className="bs-field">
+          <label htmlFor="phone">Phone <span className="opt">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" />
+        </div>
+        <div className="bs-field">
+          <label htmlFor="service">Interested in</label>
+          <select id="service" name="service" defaultValue="">
+            <option value="" disabled>Choose a service…</option>
+            {SERVICES.map((s) => (<option key={s} value={s}>{s}</option>))}
+          </select>
+        </div>
       </div>
 
-      <div className="form-group form-full">
-        <label htmlFor="message">How can we help?</label>
-        <textarea id="message" name="message" rows="4" placeholder="Briefly describe your requirements..." required></textarea>
+      <div className="bs-field">
+        <label htmlFor="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project…" required></textarea>
       </div>
 
-      <button type="submit" name="submit_inquiry" className="submit-btn-blue">Submit Inquiry</button>
+      <button type="submit" className="btn-primary btn-large">Send message</button>
+      <p className="bs-form-note">We&apos;ll never share your details. Expect a reply within one business day.</p>
     </form>
   );
 }
