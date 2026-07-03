@@ -247,7 +247,7 @@ export default function HomePage() {
         </div>
         <div className="bs-tech-chips animate-fade-up delay-100">
           {TECH.map((t) => (
-            <span key={t.key} className="bs-chip"><img src={`/tech/${t.key}.svg`} alt="" loading="lazy" />{t.name}</span>
+            <span key={t.key} className="bs-chip">{t.name}</span>
           ))}
         </div>
       </section>

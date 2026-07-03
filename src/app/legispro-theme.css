@@ -4773,11 +4773,9 @@ body {
 /* Tech stack */
 .bs-tech { padding:var(--section-padding-mobile) 1rem; background:#ffffff; }
 @media (min-width:768px){ .bs-tech{ padding:var(--section-padding) 1.5rem; } }
-.bs-tech-chips { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0.85rem; max-width:720px; margin:0 auto; }
-@media (max-width:640px){ .bs-tech-chips{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
-.bs-chip { display:flex; align-items:center; justify-content:center; gap:9px; padding:0.7rem 0.9rem; border-radius:12px; background:#ffffff; border:1px solid #E2E8F0; color:#0F172A; font-weight:600; font-size:0.92rem; box-shadow:0 2px 8px -3px rgba(16,24,40,0.10); transition:all 0.25s ease; }
-.bs-chip img { width:24px; height:24px; display:block; }
-.bs-chip:hover { transform:translateY(-3px); border-color:#BFDBFE; box-shadow:0 12px 20px -8px rgba(59,130,246,0.26); }
+.bs-tech-chips { display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem; max-width:760px; margin:0 auto; }
+.bs-chip { display:inline-flex; align-items:center; justify-content:center; padding:0.62rem 1.4rem; border-radius:999px; background:#ffffff; border:1px solid #E2E8F0; color:#1E293B; font-weight:600; font-size:0.98rem; box-shadow:0 2px 8px -3px rgba(16,24,40,0.10); transition:all 0.25s ease; }
+.bs-chip:hover { transform:translateY(-3px); border-color:#BFDBFE; color:#1D4ED8; box-shadow:0 12px 20px -8px rgba(59,130,246,0.26); }
 
 /* Closing CTA band */
 .bs-cta { padding:var(--section-padding-mobile) 1rem; background:#ffffff; }
@@ -4814,11 +4812,7 @@ body {
 @media (max-width:900px){ .bs-hero{ background-attachment:scroll; min-height:78vh; } }
 .bs-hero::before {
   content:''; position:absolute; inset:0; z-index:0;
-  background:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(120deg, rgba(8,16,38,0.90) 0%, rgba(18,36,80,0.78) 42%, rgba(37,99,235,0.55) 100%);
-  background-size:48px 48px, 48px 48px, cover;
+  background:linear-gradient(120deg, rgba(8,16,38,0.90) 0%, rgba(18,36,80,0.78) 42%, rgba(37,99,235,0.55) 100%);
 }
 .bs-hero::after {
   content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
@@ -4874,3 +4868,22 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
   .bs-hero-logo { animation:none; }
 }
 /* END:bs-hero */
+
+/* byteSquad — mobile / tablet responsive polish */
+@media (max-width:600px){
+  .bs-hero { min-height:auto; padding:4.5rem 1.15rem; }
+  .bs-hero-title { font-size:clamp(2rem,8.5vw,2.6rem); }
+  .bs-hero-sub { font-size:1.02rem; }
+  .bs-hero-actions { gap:0.7rem; margin-bottom:2.4rem; }
+  .bs-hero-actions .bs-btn-glow, .bs-hero-actions .bs-btn-ghost-d { width:100%; justify-content:center; text-align:center; }
+  .bs-shead { margin-bottom:2rem; }
+  .bs-svc-card, .bs-wl-card { padding:1.6rem 1.4rem; }
+  .bs-cta-inner { padding:2.4rem 1.35rem; border-radius:22px; }
+  .bs-cta-actions { gap:0.7rem; }
+  .bs-cta-actions .btn-on-blue { width:100%; text-align:center; }
+  .bs-chip { padding:0.55rem 1.15rem; font-size:0.92rem; }
+}
+@media (min-width:601px) and (max-width:900px){
+  .bs-hero { padding:5rem 1.5rem; }
+  .bs-svc-grid { gap:1.25rem; }
+}
