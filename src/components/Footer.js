@@ -21,9 +21,9 @@ export default function Footer() {
               />
             </Link>
             <div className="footer-tagline-text">
-              <span>Compliance</span>
-              <span>Legal</span>
-              <span>Advisory</span>
+              <span>Build</span>
+              <span>Launch</span>
+              <span>Grow</span>
             </div>
             <div className="social-links">
               <a href="#" aria-label="LinkedIn" target="_blank">
@@ -56,14 +56,11 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="https://www.mca.gov.in/content/mca/global/en/home.html" target="_blank">MCA</a></li>
-              <li><a href="https://www.incometax.gov.in/iec/foportal/" target="_blank">Income Tax</a></li>
-              <li><a href="https://www.gst.gov.in/" target="_blank">GST</a></li>
-              <li><a href="https://www.meity.gov.in/" target="_blank">MSH (Meity)</a></li>
-              <li><a href="https://www.startupindia.gov.in/" target="_blank">Startup India</a></li>
-              <li><a href="https://www.nsws.gov.in/" target="_blank">NSWS Portal</a></li>
-              <li><a href="https://www.sebi.gov.in/" target="_blank">SEBI</a></li>
-              <li><a href="https://www.rbi.org.in/" target="_blank">RBI</a></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about-us">About Us</Link></li>
+              <li><Link href="/services">Services</Link></li>
+              <li><Link href="/white-label">White-Label Solutions</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -87,8 +84,8 @@ export default function Footer() {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                <a href="mailto:info@legisproadvisors.com">
-                  info@legisproadvisors.com
+                <a href="mailto:hello@bytesquad.com">
+                  hello@bytesquad.com
                 </a>
               </li>
               <li>
@@ -110,9 +107,6 @@ export default function Footer() {
         <div className="container footer-bottom-inner">
           <div className="footer-bottom-left">
             <p className="footer-bottom-copy">&copy; 2026 byteSquad. All rights reserved.</p>
-          </div>
-          <div className="footer-bottom-center">
-            <p className="footer-bottom-dev">Developed By Neeraj Bhatt</p>
           </div>
           <div className="footer-bottom-right">
             <div className="footer-legal">
