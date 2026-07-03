@@ -4966,3 +4966,9 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
 
 /* byteSquad — How We Work numbered cards: blue accent */
 .client-number { -webkit-text-stroke:1.5px #93C5FD; }
+
+/* How We Work cards: solid filled card (complete look, no transparent shine) */
+.client-card { background:#ffffff; border:1px solid #E2E8F0; border-radius:16px; box-shadow:0 4px 10px -3px rgba(16,24,40,0.08); padding:2.25rem 1.75rem; transition:transform 0.35s cubic-bezier(0.165,0.84,0.44,1), box-shadow 0.35s ease, border-color 0.35s ease; }
+.client-card::before, .client-card::after { content:none !important; display:none !important; }
+.client-card:hover { transform:translateY(-6px); border-color:#BFDBFE; box-shadow:0 18px 30px -12px rgba(59,130,246,0.22); }
+.client-card:hover .client-number { -webkit-text-stroke:0; background:linear-gradient(135deg,#3B82F6,#60A5FA); -webkit-background-clip:text; background-clip:text; color:transparent; transform:scale(1.05); }
