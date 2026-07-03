@@ -26,10 +26,22 @@ const PRODUCTS = [
 ];
 
 const STEPS = [
-  { n: "01", title: "Discover", desc: "We dig into your goals, users and requirements." },
-  { n: "02", title: "Design", desc: "We shape the experience in Figma — from flows to polished interfaces." },
-  { n: "03", title: "Build", desc: "Our engineers develop your product in focused iterations, with clean code." },
-  { n: "04", title: "Launch", desc: "We test, deploy and hand over a product ready for the real world." },
+  {
+    n: "01", title: "Discover", desc: "We dig into your goals, users and requirements.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>),
+  },
+  {
+    n: "02", title: "Design", desc: "We shape the experience in Figma — from flows to polished interfaces.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>),
+  },
+  {
+    n: "03", title: "Build", desc: "Our engineers develop your product in focused iterations, with clean code.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>),
+  },
+  {
+    n: "04", title: "Launch", desc: "We test, deploy and hand over a product ready for the real world.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>),
+  },
 ];
 
 const WHY = [
@@ -199,10 +211,13 @@ export default function HomePage() {
             <h2>How We Work</h2>
             <p>From idea to launch, in four focused steps.</p>
           </div>
-          <div className="clients-grid">
+          <div className="bs-steps">
             {STEPS.map((s, i) => (
-              <div key={s.n} className={`client-card animate-fade-up ${DELAYS[i % 4]}`}>
-                <div className="client-number">{s.n}</div>
+              <div key={s.n} className={`bs-step animate-fade-up ${DELAYS[i % 4]}`}>
+                <div className="bs-step-badge">
+                  {s.icon}
+                  <span className="bs-step-num">{s.n}</span>
+                </div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
               </div>
