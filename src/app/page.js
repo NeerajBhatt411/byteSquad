@@ -85,13 +85,6 @@ const TECH = [
   { key: "wordpress", name: "WordPress" }, { key: "figma", name: "Figma" },
 ];
 
-const HIGHLIGHTS = [
-  { big: "8+", sub: "Technologies", note: "Flutter, React, Node.js & more" },
-  { big: "3", sub: "Platforms", note: "iOS · Android · Web" },
-  { big: "6", sub: "White-Label Products", note: "Ready to brand & launch" },
-  { big: "100%", sub: "Your Brand", note: "Full ownership, end to end" },
-];
-
 const DELAYS = ["delay-100", "delay-200", "delay-300", "delay-400"];
 const arrow = (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -114,19 +107,6 @@ export default function HomePage() {
             <Link href="/contact" className="bs-btn-glow">Start a Project</Link>
             <Link href="/services" className="bs-btn-ghost-d">Explore Services {arrow}</Link>
           </div>
-        </div>
-      </section>
-
-      {/* ===== Highlights band ===== */}
-      <section className="bs-stats animate-fade-up">
-        <div className="bs-stats-inner">
-          {HIGHLIGHTS.map((s, i) => (
-            <div key={i} className="bs-stat">
-              <span className="bs-stat-big">{s.big}</span>
-              <span className="bs-stat-sub">{s.sub}</span>
-              <span className="bs-stat-note">{s.note}</span>
-            </div>
-          ))}
         </div>
       </section>
 
