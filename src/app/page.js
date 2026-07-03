@@ -192,9 +192,10 @@ export default function HomePage() {
       {/* ===== How We Work ===== */}
       <section className="clients-section">
         <div className="container">
-          <div className="section-header animate-fade-up">
+          <div className="bs-shead animate-fade-up">
+            <span className="bs-eyebrow">Our Process</span>
             <h2>How We Work</h2>
-            <p className="section-subtitle">From idea to launch, in four focused steps.</p>
+            <p>From idea to launch, in four focused steps.</p>
           </div>
           <div className="clients-grid">
             {STEPS.map((s, i) => (
@@ -211,9 +212,10 @@ export default function HomePage() {
       {/* ===== Why byteSquad ===== */}
       <section className="why-choose-us-section">
         <div className="container relative z-10">
-          <div className="section-header animate-fade-up">
+          <div className="bs-shead on-dark animate-fade-up">
+            <span className="bs-eyebrow">Why Us</span>
             <h2>Why byteSquad</h2>
-            <p className="section-subtitle">Built to help you launch faster and grow with confidence.</p>
+            <p>Built to help you launch faster and grow with confidence.</p>
           </div>
           <div className="why-choose-grid">
             {WHY.map((w, i) => (
