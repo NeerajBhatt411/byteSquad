@@ -212,7 +212,7 @@ export default function HomePage() {
       {/* ===== Why byteSquad ===== */}
       <section className="why-choose-us-section">
         <div className="container relative z-10">
-          <div className="bs-shead on-dark animate-fade-up">
+          <div className="bs-shead animate-fade-up">
             <span className="bs-eyebrow">Why Us</span>
             <h2>Why byteSquad</h2>
             <p>Built to help you launch faster and grow with confidence.</p>

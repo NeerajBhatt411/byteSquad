@@ -4900,35 +4900,25 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
 /* unified card titles (same size + weight everywhere) */
 .bs-svc-t, .bs-wl-name, .client-card h3, .why-choose-card h3 { font-size:1.2rem; font-weight:700; letter-spacing:-0.01em; }
 
-/* byteSquad — modern "Why byteSquad" glassy dark cards */
-.why-choose-us-section { background-color:#080d1a; }
+
+/* byteSquad — light "Why byteSquad" section */
+.why-choose-us-section { background-color:#F7FAFF; color:#0F172A; }
 .why-choose-us-section::before {
   background:
-    radial-gradient(640px 340px at 12% 6%, rgba(37,99,235,0.30), transparent 60%),
-    radial-gradient(560px 300px at 90% 96%, rgba(59,130,246,0.20), transparent 62%);
+    radial-gradient(640px 340px at 12% 6%, rgba(96,165,250,0.16), transparent 60%),
+    radial-gradient(560px 300px at 90% 96%, rgba(59,130,246,0.10), transparent 62%);
 }
 .why-choose-card {
-  background:rgba(255,255,255,0.045);
-  border:1px solid rgba(255,255,255,0.10);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  box-shadow:0 12px 34px -14px rgba(0,0,0,0.6);
+  background:linear-gradient(180deg,#ffffff 0%,#f7faff 100%);
+  border:1px solid #E8EEF6;
+  box-shadow:0 1px 2px rgba(16,24,40,0.04), 0 10px 22px -8px rgba(16,24,40,0.10), 0 24px 44px -16px rgba(59,130,246,0.10);
 }
 .why-choose-card:hover {
   transform:translateY(-8px);
-  border-color:rgba(96,165,250,0.5);
-  box-shadow:0 26px 48px -18px rgba(37,99,235,0.45);
+  border-color:#BFDBFE;
+  box-shadow:0 2px 4px rgba(16,24,40,0.05), 0 18px 32px -10px rgba(16,24,40,0.14), 0 44px 64px -22px rgba(59,130,246,0.28);
 }
-.why-choose-icon {
-  background:rgba(59,130,246,0.16);
-  border:1px solid rgba(96,165,250,0.30);
-  color:#93C5FD;
-}
-.why-choose-card:hover .why-choose-icon {
-  background:var(--primary-color);
-  color:#ffffff;
-  border-color:var(--primary-color);
-  transform:rotate(5deg) scale(1.1);
-}
-.why-choose-card h3 { color:#F1F5F9; }
-.why-choose-card-body p { color:#93A3B8; }
+.why-choose-icon { background:#F0F7FF; border:1px solid #DBEAFE; color:var(--primary-color); }
+.why-choose-card:hover .why-choose-icon { background:var(--primary-color); color:#ffffff; transform:rotate(5deg) scale(1.1); }
+.why-choose-card h3 { color:#0F172A; }
+.why-choose-card-body p { color:#475569; }
