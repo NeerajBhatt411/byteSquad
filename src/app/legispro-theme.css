@@ -5054,3 +5054,6 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
 .bs-prod-tech-card, .bs-prod-brand-card { background:#fff; border:1px solid #E8EEF6; border-radius:20px; padding:2rem 1.9rem; box-shadow:0 6px 16px -6px rgba(16,24,40,0.08); }
 .bs-prod-tech-card p { color:#334155; font-size:1rem; line-height:1.7; margin:0.7rem 0 0; }
 .bs-prod-brand-card .bs-srv-list { margin-top:0.9rem; }
+
+/* Instant reveal on client-side navigation (no fade delay) */
+html.reveal-instant .animate-fade-up { opacity:1 !important; transform:none !important; transition:none !important; animation:none !important; }
