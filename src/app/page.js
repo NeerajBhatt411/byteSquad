@@ -253,11 +253,12 @@ export default function HomePage() {
       <section className="bs-cta">
         <div className="bs-cta-inner animate-fade-up">
           <h2>Have a project in mind?</h2>
-          <p>Tell us what you're working on — a custom build or a white-label product. The conversation starts with a simple message.</p>
+          <p>Book a free 30-minute consultation — custom build or white-label product. We reply within one business day.</p>
           <div className="bs-cta-actions">
             <Link href="/contact" className="btn-on-blue">Start a Project</Link>
             <Link href="/white-label" className="btn-on-blue ghost">See White-Label Products</Link>
           </div>
+          <p className="bs-cta-contact">Or email us directly at <a href="mailto:hello@bytesquad.com">hello@bytesquad.com</a></p>
         </div>
       </section>
     </>

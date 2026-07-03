@@ -4931,3 +4931,25 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
 .why-choose-icon { width:58px; height:58px; border-radius:15px; background:linear-gradient(135deg,#3B82F6,#60A5FA); border:none; color:#ffffff; box-shadow:0 10px 20px -8px rgba(59,130,246,0.55); }
 .why-choose-icon svg { width:28px; height:28px; }
 .why-choose-card:hover .why-choose-icon { background:linear-gradient(135deg,#2563EB,#3B82F6); transform:rotate(-5deg) scale(1.1); color:#fff; }
+
+/* byteSquad — safe polish pass (from research/audit) */
+/* alternating section tints for clear separation between adjacent white sections */
+.bs-svc { background:#F8FAFC; }
+.bs-wl { background:#ffffff; }
+.clients-section { background:#F8FAFC; }
+.why-choose-us-section { background-color:#ffffff; }
+.bs-tech { background:#F8FAFC; }
+/* closing CTA: subtle white glow + reassurance/contact line */
+.bs-cta-inner { background:radial-gradient(620px 240px at 82% -12%, rgba(255,255,255,0.22), transparent 62%), linear-gradient(135deg,#2563EB 0%,#3B82F6 55%,#60A5FA 100%); }
+.bs-cta-contact { margin-top:1.4rem; font-size:0.92rem; color:rgba(255,255,255,0.88); }
+.bs-cta-contact a { color:#ffffff; font-weight:700; text-decoration:underline; text-underline-offset:2px; }
+/* keyboard focus states (accessibility) */
+.bs-svc-card:focus-visible, .bs-wl-card:focus-visible, .client-card:focus-visible,
+.bs-btn-glow:focus-visible, .bs-btn-ghost-d:focus-visible, .btn-on-blue:focus-visible,
+.btn-primary:focus-visible, .btn-large:focus-visible, .bs-chip:focus-visible {
+  outline:2px solid var(--primary-color); outline-offset:3px; border-radius:10px;
+}
+/* How We Work: avoid stranded 4th step at tablet widths */
+@media (min-width:900px) and (max-width:1023px){ .clients-grid{ grid-template-columns:repeat(2,1fr); } }
+/* consistent button radius */
+.btn-primary, .btn-large, .btn-on-blue { border-radius:12px; }
