@@ -102,17 +102,10 @@ export default function HomePage() {
           <h1 className="bs-hero-title animate-fade-up">
             Software That Moves<br /><span className="grad">Your Business Forward</span>
           </h1>
-          <p className="bs-hero-sub animate-fade-up delay-100">We design and build custom apps, websites and software — plus ready-to-launch white-label products you can release under your own brand.</p>
+          <p className="bs-hero-sub animate-fade-up delay-100">We design, build and ship custom apps, websites and software — plus ready-to-launch white-label products you can release under your own brand.</p>
           <div className="bs-hero-actions animate-fade-up delay-200">
             <Link href="/contact" className="bs-btn-glow">Start a Project</Link>
             <Link href="/services" className="bs-btn-ghost-d">Explore Services {arrow}</Link>
-          </div>
-          <div className="bs-hero-logos animate-fade-up delay-300">
-            {["flutter", "react", "nodejs", "kotlin", "java", "figma", "wordpress"].map((t) => (
-              <span key={t} className="bs-hero-logo" title={TECH_NAME[t]}>
-                <img src={`/tech/${t}.svg`} alt={TECH_NAME[t]} loading="lazy" />
-              </span>
-            ))}
           </div>
         </div>
       </section>
@@ -247,7 +240,7 @@ export default function HomePage() {
         </div>
         <div className="bs-tech-chips animate-fade-up delay-100">
           {TECH.map((t) => (
-            <span key={t.key} className="bs-chip">{t.name}</span>
+            <span key={t.key} className="bs-chip"><img src={`/tech/${t.key}.svg`} alt="" loading="lazy" />{t.name}</span>
           ))}
         </div>
       </section>
