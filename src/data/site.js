@@ -2,9 +2,9 @@
 export const SITE = {
   name: "byteSquad",
   legalName: "byteSquad",
-  tagline: "Built byte by byte.",
+  tagline: "Build. Launch. Grow.",
   description:
-    "byteSquad is a software development company building apps, websites and white-label products. Built byte by byte.",
+    "byteSquad is a software development company that helps you build, launch and grow — custom apps, websites and ready-to-launch white-label products.",
   url: "https://www.legisproadvisors.com",
   contact: {
     address: "Paschim Vihar, New Delhi",
