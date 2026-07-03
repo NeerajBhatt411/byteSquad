@@ -5,7 +5,7 @@ export const SITE = {
   tagline: "Build. Launch. Grow.",
   description:
     "byteSquad is a software development company that helps you build, launch and grow — custom apps, websites and ready-to-launch white-label products.",
-  url: "https://www.legisproadvisors.com",
+  url: "https://www.bytesquad.com",
   contact: {
     address: "Paschim Vihar, New Delhi",
     email: "info@legisproadvisors.com",

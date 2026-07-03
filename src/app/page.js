@@ -258,7 +258,6 @@ export default function HomePage() {
             <Link href="/contact" className="btn-on-blue">Start a Project</Link>
             <Link href="/white-label" className="btn-on-blue ghost">See White-Label Products</Link>
           </div>
-          <p className="bs-cta-contact">Or email us directly at <a href="mailto:hello@bytesquad.com">hello@bytesquad.com</a></p>
         </div>
       </section>
     </>
