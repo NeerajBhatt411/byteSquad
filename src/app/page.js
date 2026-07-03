@@ -99,23 +99,29 @@ export default function HomePage() {
       {/* ===== Hero ===== */}
       <section className="bs-hero">
         <div className="bs-hero-glow" aria-hidden="true"></div>
-        <div className="bs-hero-gridlines" aria-hidden="true"></div>
         <div className="bs-hero-inner">
-          <span className="bs-hero-badge animate-fade-up">Software Development Company</span>
-          <h1 className="bs-hero-title animate-fade-up delay-100">
-            Software That Moves<br /><span className="grad">Your Business Forward</span>
-          </h1>
-          <p className="bs-hero-sub animate-fade-up delay-200">We design and build custom apps, websites and software — plus ready-to-launch white-label products you can release under your own brand.</p>
-          <div className="bs-hero-actions animate-fade-up delay-300">
-            <Link href="/contact" className="bs-btn-glow">Start a Project</Link>
-            <Link href="/services" className="bs-btn-ghost-d">Explore Services {arrow}</Link>
+          <div className="bs-hero-copy">
+            <span className="bs-hero-badge animate-fade-up">Software Development Company</span>
+            <h1 className="bs-hero-title animate-fade-up delay-100">
+              Software That Moves <span className="grad">Your Business Forward</span>
+            </h1>
+            <p className="bs-hero-sub animate-fade-up delay-200">We design and build custom apps, websites and software — plus ready-to-launch white-label products you can release under your own brand.</p>
+            <div className="bs-hero-actions animate-fade-up delay-300">
+              <Link href="/contact" className="bs-btn-glow">Start a Project</Link>
+              <Link href="/services" className="bs-btn-ghost-d">Explore Services {arrow}</Link>
+            </div>
+            <div className="bs-hero-logos animate-fade-up delay-400">
+              {["flutter", "react", "nodejs", "kotlin", "java", "figma", "wordpress"].map((t) => (
+                <span key={t} className="bs-hero-logo" title={TECH_NAME[t]}>
+                  <img src={`/tech/${t}.svg`} alt={TECH_NAME[t]} loading="lazy" />
+                </span>
+              ))}
+            </div>
           </div>
-          <div className="bs-hero-logos animate-fade-up delay-400">
-            {["flutter", "react", "nodejs", "kotlin", "java", "figma", "wordpress"].map((t) => (
-              <span key={t} className="bs-hero-logo" title={TECH_NAME[t]}>
-                <img src={`/tech/${t}.svg`} alt={TECH_NAME[t]} loading="lazy" />
-              </span>
-            ))}
+          <div className="bs-hero-visual animate-fade-up delay-200">
+            <img className="bs-hero-mockup" src="/hero-mockup.svg" alt="byteSquad app dashboard preview" />
+            <span className="bs-hero-chip bs-hero-chip-1"><img src="/tech/flutter.svg" alt="Flutter" /></span>
+            <span className="bs-hero-chip bs-hero-chip-2"><img src="/tech/react.svg" alt="React" /></span>
           </div>
         </div>
       </section>
@@ -171,6 +177,7 @@ export default function HomePage() {
               </span>
               <span className="bs-svc-t">{s.title}</span>
               <span className="bs-svc-d">{s.desc}</span>
+              <span className="bs-wl-link">Learn more {arrow}</span>
             </Link>
           ))}
         </div>
