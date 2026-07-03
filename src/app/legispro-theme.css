@@ -5057,3 +5057,14 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
 
 /* Instant reveal on client-side navigation (no fade delay) */
 html.reveal-instant .animate-fade-up { opacity:1 !important; transform:none !important; transition:none !important; animation:none !important; }
+
+/* Mobile: fix dropdown item alignment (dd-item is an <a>, was inheriting big nav-link styles) */
+@media (max-width:900px){
+  .bs-dropdown .dd-item{
+    justify-content:flex-start; gap:12px; padding:10px 12px 10px 14px;
+    font-size:0.95rem; font-weight:600; border-bottom:none; text-align:left;
+  }
+  .bs-dropdown .dd-item .t{ font-size:0.95rem; }
+  .bs-dropdown .dd-item .d{ font-size:0.78rem; }
+  .menu-item-has-children.submenu-active > .bs-dropdown{ border-left:2px solid #E5EAF2; margin-left:6px; }
+}
