@@ -4807,7 +4807,7 @@ body {
   position:relative; overflow:hidden; color:#fff; text-align:center;
   min-height:82vh; display:flex; align-items:center; justify-content:center;
   padding:clamp(5rem,10vw,7.5rem) 1.25rem;
-  background:#0a1430 url('/images/hero-photo.jpg') center/cover no-repeat;
+  background:#0a1430 url('/images/hero-photo.webp') center/cover no-repeat;
   background-attachment:fixed;
 }
 @media (max-width:900px){ .bs-hero{ background-attachment:scroll; min-height:78vh; } }

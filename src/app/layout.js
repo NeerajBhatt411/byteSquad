@@ -25,6 +25,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="/images/hero-photo.webp" fetchPriority="high" />
         <script dangerouslySetInnerHTML={{ __html: revealBootstrap }} />
         <Header />
         {children}
