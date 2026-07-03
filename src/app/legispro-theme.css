@@ -4814,7 +4814,11 @@ body {
 @media (max-width:900px){ .bs-hero{ background-attachment:scroll; min-height:78vh; } }
 .bs-hero::before {
   content:''; position:absolute; inset:0; z-index:0;
-  background:linear-gradient(120deg, rgba(8,16,38,0.90) 0%, rgba(18,36,80,0.78) 42%, rgba(37,99,235,0.55) 100%);
+  background:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(120deg, rgba(8,16,38,0.90) 0%, rgba(18,36,80,0.78) 42%, rgba(37,99,235,0.55) 100%);
+  background-size:48px 48px, 48px 48px, cover;
 }
 .bs-hero::after {
   content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
@@ -4827,9 +4831,9 @@ body {
   font-size:0.76rem; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; margin-bottom:1.5rem;
 }
 .bs-hero-badge::before { content:''; width:7px; height:7px; border-radius:50%; background:#60A5FA; box-shadow:0 0 10px 2px rgba(96,165,250,0.9); }
-.bs-hero-title { font-size:clamp(2.2rem,6vw,4rem); font-weight:800; line-height:1.08; letter-spacing:-0.02em; margin:0 0 1.25rem; color:#fff; text-shadow:0 2px 24px rgba(0,0,0,0.28); }
+.bs-hero-title { font-size:clamp(2.5rem,6.6vw,4.6rem); font-weight:800; line-height:1.06; letter-spacing:-0.025em; margin:0 0 1.35rem; color:#fff; text-shadow:0 2px 26px rgba(0,0,0,0.32); }
 .bs-hero-title .grad { background:linear-gradient(100deg,#BFDBFE,#93C5FD 45%,#60A5FA); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.bs-hero-sub { font-size:clamp(1rem,2.2vw,1.2rem); color:#CBD8EA; line-height:1.6; max-width:660px; margin:0 auto 2.25rem; text-shadow:0 1px 12px rgba(0,0,0,0.25); }
+.bs-hero-sub { font-size:clamp(1.05rem,2.3vw,1.3rem); color:#D3DEEE; line-height:1.65; max-width:680px; margin:0 auto 2.4rem; text-shadow:0 1px 12px rgba(0,0,0,0.25); }
 .bs-hero-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:3rem; }
 .bs-btn-glow {
   display:inline-block; padding:0.9rem 2.25rem; border-radius:12px; font-weight:700; font-size:1rem; text-decoration:none; color:#fff;
