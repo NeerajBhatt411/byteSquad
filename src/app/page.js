@@ -3,15 +3,17 @@ import Link from "next/link";
 // No page title here — the home page uses the root default:
 // "byteSquad — Built byte by byte"
 
+const TECH_NAME = { flutter: "Flutter", react: "React", nodejs: "Node.js", kotlin: "Kotlin", java: "Java", express: "Express", figma: "Figma", wordpress: "WordPress" };
+
 const SERVICES = [
-  { title: "App Development", desc: "Native-feeling iOS & Android apps — cross-platform with Flutter or native Kotlin/Java.", img: "/menu-icons/app.svg", href: "/services#app" },
-  { title: "Web Development", desc: "Fast, responsive websites and web apps built with React.", img: "/menu-icons/web.svg", href: "/services#web" },
-  { title: "Backend Development", desc: "Reliable, scalable APIs and server logic with Node.js and Express.", img: "/menu-icons/backend.svg", href: "/services#backend" },
-  { title: "UI/UX Design", desc: "Intuitive, on-brand interfaces designed and prototyped in Figma.", img: "/menu-icons/uiux.svg", href: "/services#uiux" },
-  { title: "E-commerce", desc: "Online stores and checkout experiences designed to convert.", img: "/menu-icons/ecommerce.svg", href: "/services#ecommerce" },
-  { title: "Custom Software", desc: "Tailored platforms, dashboards and internal tools around your workflow.", img: "/menu-icons/custom.svg", href: "/services#custom" },
-  { title: "WordPress", desc: "Flexible, easy-to-manage CMS websites built on WordPress.", img: "/menu-icons/wordpress.svg", href: "/services#wordpress" },
-  { title: "ERP Solutions", desc: "Operations, inventory and finance systems tailored to your business.", img: "/menu-icons/erp.svg", href: "/services#erp" },
+  { title: "App Development", desc: "Native-feeling iOS & Android apps — cross-platform with Flutter or native Kotlin/Java.", href: "/services#app", tech: ["flutter", "kotlin", "java"] },
+  { title: "Web Development", desc: "Fast, responsive websites and web apps built with React and Node.js.", href: "/services#web", tech: ["react", "nodejs"] },
+  { title: "Backend Development", desc: "Reliable, scalable APIs and server logic with Node.js, Express and Java.", href: "/services#backend", tech: ["nodejs", "express", "java"] },
+  { title: "UI/UX Design", desc: "Intuitive, on-brand interfaces designed and prototyped in Figma.", href: "/services#uiux", tech: ["figma"] },
+  { title: "E-commerce", desc: "Online stores and checkout experiences designed to convert.", href: "/services#ecommerce", tech: ["react", "wordpress"] },
+  { title: "Custom Software", desc: "Tailored platforms, dashboards and internal tools around your workflow.", href: "/services#custom", tech: ["react", "nodejs"] },
+  { title: "WordPress", desc: "Flexible, easy-to-manage CMS websites built on WordPress.", href: "/services#wordpress", tech: ["wordpress"] },
+  { title: "ERP Solutions", desc: "Operations, inventory and finance systems tailored to your business.", href: "/services#erp", tech: ["react", "nodejs"] },
 ];
 
 const PRODUCTS = [
@@ -145,7 +147,11 @@ export default function HomePage() {
         <div className="bs-svc-grid">
           {SERVICES.map((s, i) => (
             <Link key={s.href} href={s.href} className={`bs-svc-card animate-fade-up ${DELAYS[i % 4]}`}>
-              <span className="bs-svc-ic"><img src={s.img} alt="" loading="lazy" /></span>
+              <span className="bs-svc-logos">
+                {s.tech.map((t) => (
+                  <img key={t} className="bs-tlogo" src={`/tech/${t}.svg`} alt={TECH_NAME[t]} title={TECH_NAME[t]} loading="lazy" />
+                ))}
+              </span>
               <span className="bs-svc-t">{s.title}</span>
               <span className="bs-svc-d">{s.desc}</span>
             </Link>

@@ -4706,21 +4706,21 @@ body {
 .bs-platforms { text-align:center; color:#475569; font-size:0.95rem; margin:-0.5rem auto 2.5rem; }
 .bs-platforms b { color:#0F172A; font-weight:700; }
 .bs-platforms .dot { color:#CBD5E1; margin:0 0.55rem; }
-.bs-svc-grid { display:grid; grid-template-columns:1fr; gap:1.25rem; max-width:1200px; margin:0 auto; }
-@media (min-width:560px){ .bs-svc-grid{ grid-template-columns:repeat(2,1fr); } }
-@media (min-width:980px){ .bs-svc-grid{ grid-template-columns:repeat(4,1fr); } }
+.bs-svc-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem; max-width:1200px; margin:0 auto; }
 .bs-svc-card {
-  display:flex; flex-direction:column; align-items:flex-start; gap:0.75rem;
+  flex:1 1 330px; max-width:376px;
+  display:flex; flex-direction:column; align-items:flex-start; gap:0.85rem;
   background:#ffffff; border:1px solid #E2E8F0; border-radius:18px;
-  padding:1.6rem 1.5rem; text-decoration:none; height:100%;
+  padding:1.9rem 1.75rem; text-decoration:none;
   box-shadow:0 4px 6px -1px rgba(0,0,0,0.04);
   transition:transform 0.35s cubic-bezier(0.165,0.84,0.44,1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
 .bs-svc-card:hover { transform:translateY(-6px); border-color:#BFDBFE; box-shadow:0 18px 30px -12px rgba(59,130,246,0.25); }
-.bs-svc-ic { width:52px; height:52px; border-radius:13px; background:#F0F7FF; display:flex; align-items:center; justify-content:center; }
-.bs-svc-ic img { width:28px; height:28px; display:block; }
-.bs-svc-t { font-size:1.1rem; font-weight:700; color:#0F172A; }
-.bs-svc-d { font-size:0.92rem; line-height:1.55; color:#64748B; }
+.bs-svc-logos { display:flex; align-items:center; gap:12px; min-height:40px; margin-bottom:2px; flex-wrap:wrap; }
+.bs-tlogo { width:36px; height:36px; display:block; object-fit:contain; transition:transform 0.3s ease; }
+.bs-svc-card:hover .bs-tlogo { transform:translateY(-3px); }
+.bs-svc-t { font-size:1.15rem; font-weight:700; color:#0F172A; }
+.bs-svc-d { font-size:0.94rem; line-height:1.6; color:#64748B; }
 
 /* White-Label products */
 .bs-wl { padding:var(--section-padding-mobile) 1rem; background:#F8FAFC; }
