@@ -34,8 +34,8 @@ const STEPS = [
 
 const WHY = [
   {
-    title: "Clear technology, no guesswork",
-    desc: "We tell you exactly what we're building with and why — no black boxes, no jargon.",
+    title: "Clear tech, zero guesswork",
+    desc: "We tell you exactly what we build with — and why. No black boxes, no jargon.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path>
@@ -44,8 +44,8 @@ const WHY = [
     ),
   },
   {
-    title: "Design & engineering together",
-    desc: "One team owns the experience end to end, so nothing gets lost in handoff.",
+    title: "One team, end to end",
+    desc: "Design and engineering under one roof — nothing gets lost in handoff.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -57,7 +57,7 @@ const WHY = [
   },
   {
     title: "Two ways to launch",
-    desc: "Go fully custom, or move faster with a ready-made white-label product.",
+    desc: "Build fully custom, or go live faster with a ready-made white-label product.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
@@ -68,8 +68,8 @@ const WHY = [
     ),
   },
   {
-    title: "Built to grow",
-    desc: "Scalable architecture and clean foundations that grow with your business.",
+    title: "Built to scale",
+    desc: "Clean, scalable architecture and solid foundations that grow with you.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="3" y1="21" x2="21" y2="21"></line>

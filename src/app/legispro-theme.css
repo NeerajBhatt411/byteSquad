@@ -4953,3 +4953,15 @@ html.js-reveal .animate-fade-up.delay-500{ transition-delay:.35s } html.js-revea
 @media (min-width:900px) and (max-width:1023px){ .clients-grid{ grid-template-columns:repeat(2,1fr); } }
 /* consistent button radius */
 .btn-primary, .btn-large, .btn-on-blue { border-radius:12px; }
+
+/* byteSquad — CTA gap + stronger tints + Why byteSquad polish */
+/* more visible alternating section tints */
+.bs-svc, .clients-section, .bs-tech { background:#EFF4FE; }
+/* closing CTA: clear gap from the section above (was feeling stuck) */
+.bs-cta { padding-top:clamp(4.5rem,9vw,7rem); margin-top:1.25rem; }
+/* Why byteSquad: bigger icons + roomier premium cards */
+.why-choose-content { padding:2.4rem 2.4rem; gap:1.3rem; }
+.why-choose-icon { width:62px; height:62px; border-radius:16px; }
+.why-choose-icon svg { width:30px; height:30px; }
+.why-choose-card h3 { font-size:1.28rem; }
+@media (max-width:640px){ .why-choose-content { padding:1.75rem 1.6rem; } }
