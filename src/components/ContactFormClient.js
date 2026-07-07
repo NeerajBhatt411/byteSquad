@@ -13,7 +13,7 @@ const SERVICES = [
 export default function ContactFormClient() {
   const [sent, setSent] = useState(false);
 
-  // No backend — compose an email to hello@bytesquad.com with the details.
+  // No backend — compose an email to info@bytesquad.com with the details.
   function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -25,7 +25,7 @@ export default function ContactFormClient() {
       `Phone: ${data.get("phone") || ""}\n` +
       `Interested in: ${data.get("service") || ""}\n\n` +
       `${data.get("message") || ""}`;
-    window.location.href = `mailto:hello@bytesquad.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@bytesquad.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   }
 
@@ -33,7 +33,7 @@ export default function ContactFormClient() {
     <form className="bs-form" onSubmit={handleSubmit}>
       {sent && (
         <div className="bs-form-msg ok">
-          Opening your email app… If nothing happens, write to us at <a href="mailto:hello@bytesquad.com">hello@bytesquad.com</a>. 🎉
+          Opening your email app… If nothing happens, write to us at <a href="mailto:info@bytesquad.com">info@bytesquad.com</a>. 🎉
         </div>
       )}
 

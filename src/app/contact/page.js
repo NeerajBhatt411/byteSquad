@@ -3,7 +3,7 @@ import ContactFormClient from "@/components/ContactFormClient";
 export const metadata = {
   title: "Contact",
   description:
-    "Tell byteSquad about your project — custom software or a white-label product. We reply within one business day. Email hello@bytesquad.com.",
+    "Tell byteSquad about your project — custom software or a white-label product. We reply within one business day. Email info@bytesquad.com.",
 };
 
 const STEPS = [
@@ -51,9 +51,9 @@ export default function ContactPage() {
 
             <div className="bs-reach">
               <h3>Other ways to reach us</h3>
-              <a className="bs-reach-item" href="mailto:hello@bytesquad.com">
+              <a className="bs-reach-item" href="mailto:info@bytesquad.com">
                 <span className="bs-reach-ic">{mailIcon}</span>
-                <span><b>Email</b><br />hello@bytesquad.com</span>
+                <span><b>Email</b><br />info@bytesquad.com</span>
               </a>
               <div className="bs-reach-item is-soon">
                 <span className="bs-reach-ic">{phoneIcon}</span>
