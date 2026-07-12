@@ -123,9 +123,9 @@ export default function PrivacyPage() {
             <p>For any questions or concerns regarding this Privacy Policy, please contact:</p>
             <div className="policy-contact">
               <p><strong>byteSquad</strong></p>
-              <p>Email: info@bytesquad.com</p>
+              <p>Email: info@bytesquad.in</p>
               <p>Phone: +91-7042232923</p>
-              <p>Website: www.bytesquad.com</p>
+              <p>Website: www.bytesquad.in</p>
             </div>
           </div>
         </div>

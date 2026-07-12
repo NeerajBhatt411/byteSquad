@@ -9,14 +9,14 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "byteSquad",
-  url: "https://www.bytesquad.com",
+  url: "https://www.bytesquad.in",
   slogan: "Build. Launch. Grow.",
   description:
     "byteSquad is a software development company building apps, websites and white-label products.",
 };
 
 export const metadata = {
-  metadataBase: new URL("https://www.bytesquad.com"),
+  metadataBase: new URL("https://www.bytesquad.in"),
   title: {
     default: "byteSquad — Build. Launch. Grow.",
     template: "%s - byteSquad",
@@ -40,7 +40,7 @@ export const metadata = {
     title: "byteSquad — Build. Launch. Grow.",
     description:
       "Custom apps, websites and ready-to-launch white-label products.",
-    url: "https://www.bytesquad.com",
+    url: "https://www.bytesquad.in",
   },
   twitter: {
     card: "summary_large_image",

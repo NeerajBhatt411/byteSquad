@@ -764,7 +764,7 @@ function FooterTab() {
       {saved && <div className="bsa-msg ok">Saved — the live site is updated.</div>}
       <div className="bsa-form-row">
         {field("address", "Address", "B-48, Sector 48, Noida")}
-        {field("email", "Email", "info@bytesquad.com")}
+        {field("email", "Email", "info@bytesquad.in")}
       </div>
       <div className="bsa-form-row">
         {field("phone", "Phone", "+91 70422 32923")}

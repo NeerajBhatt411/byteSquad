@@ -24,7 +24,7 @@ export const DEFAULT_PRODUCTS = [
 
 export const DEFAULT_FOOTER = {
   address: "B-48, Sector 48, Noida",
-  email: "info@bytesquad.com",
+  email: "info@bytesquad.in",
   phone: "+91 70422 32923",
   linkedin: "",
   instagram: "",

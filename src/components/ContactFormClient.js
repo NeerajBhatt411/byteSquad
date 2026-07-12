@@ -42,11 +42,11 @@ export default function ContactFormClient() {
         setStatus("ok");
         form.reset();
       } else {
-        setErrorMsg(result.message || "Something went wrong. Please try again or email us at info@bytesquad.com.");
+        setErrorMsg(result.message || "Something went wrong. Please try again or email us at info@bytesquad.in.");
         setStatus("error");
       }
     } catch {
-      setErrorMsg("Network error. Please try again or email us at info@bytesquad.com.");
+      setErrorMsg("Network error. Please try again or email us at info@bytesquad.in.");
       setStatus("error");
     }
   }
