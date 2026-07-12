@@ -60,6 +60,26 @@ export async function POST(request) {
       );
     }
 
+    // Persist the enquiry to MongoDB so it shows up in the admin panel.
+    // Failure here must never block the submission.
+    try {
+      const { isDbConfigured, getDb } = await import("@/lib/db");
+      if (isDbConfigured()) {
+        const db = await getDb();
+        await db.collection("enquiries").insertOne({
+          name,
+          email,
+          phone,
+          subject,
+          message,
+          read: false,
+          createdAt: new Date(),
+        });
+      }
+    } catch (dbError) {
+      console.error("Contact form: failed to save enquiry to DB.", dbError?.message);
+    }
+
     const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_TO } = process.env;
     const smtpConfigured =
       SMTP_HOST && SMTP_PORT && SMTP_USER && SMTP_PASS && CONTACT_TO;

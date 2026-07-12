@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getProducts } from "@/lib/content";
 
 export const metadata = {
   title: "White-Label Solutions",
@@ -36,15 +37,6 @@ const WHY = [
   },
 ];
 
-const PRODUCTS = [
-  { name: "Taxi App", desc: "A complete ride-booking platform with rider, driver and admin apps.", img: "/menu-icons/taxi.svg", tint: "p-taxi", href: "/white-label/taxi-app" },
-  { name: "OTT / Streaming", desc: "A Netflix-style video streaming service for iOS, Android and Web.", img: "/menu-icons/ott.svg", tint: "p-ott", href: "/white-label/ott-app" },
-  { name: "Dating App", desc: "A modern matchmaking app with profiles, matching and chat.", img: "/menu-icons/dating.svg", tint: "p-dating", href: "/white-label/dating-app" },
-  { name: "CRM", desc: "A Salesforce-style CRM to manage leads, deals and customers.", img: "/menu-icons/crm.svg", tint: "p-crm", href: "/white-label/crm" },
-  { name: "School Management", desc: "An all-in-one ERP for schools: students, attendance, fees and more.", img: "/menu-icons/school.svg", tint: "p-school", href: "/white-label/school" },
-  { name: "LMS — Smart Learning", desc: "Your own course platform with video, quizzes and certificates.", img: "/menu-icons/lms.svg", tint: "p-lms", href: "/white-label/lms" },
-];
-
 const STEPS = [
   { n: "01", title: "Pick", desc: "Choose the ready-made product that fits your business." },
   { n: "02", title: "Customize", desc: "We tailor features, workflows and integrations to you." },
@@ -54,7 +46,8 @@ const STEPS = [
 
 const DELAYS = ["delay-100", "delay-200", "delay-300", "delay-400"];
 
-export default function WhiteLabelPage() {
+export default async function WhiteLabelPage() {
+  const products = await getProducts();
   return (
     <>
       {/* Hero */}
@@ -96,8 +89,8 @@ export default function WhiteLabelPage() {
           <p>Each ships with web, admin and mobile apps — customizable end to end.</p>
         </div>
         <div className="bs-wl-grid">
-          {PRODUCTS.map((p, i) => (
-            <Link key={p.href} href={p.href} className={`bs-wl-card ${p.tint} animate-fade-up ${DELAYS[i % 4]}`}>
+          {products.map((p, i) => (
+            <Link key={p.id || p.name} href={p.href || "/contact"} className={`bs-wl-card ${p.tint || "p-crm"} animate-fade-up ${DELAYS[i % 4]}`}>
               <span className="bs-wl-ic"><img src={p.img} alt="" loading="lazy" /></span>
               <span className="bs-wl-name">{p.name}</span>
               <span className="bs-wl-d">{p.desc}</span>

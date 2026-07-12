@@ -11,31 +11,68 @@ const SERVICES = [
 ];
 
 export default function ContactFormClient() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | sending | ok | error
+  const [errorMsg, setErrorMsg] = useState("");
 
-  // No backend — compose an email to info@bytesquad.com with the details.
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const service = data.get("service") || "a project";
-    const subject = `New enquiry — ${service}`;
-    const body =
-      `Name: ${data.get("name") || ""}\n` +
-      `Email: ${data.get("email") || ""}\n` +
-      `Phone: ${data.get("phone") || ""}\n` +
-      `Interested in: ${data.get("service") || ""}\n\n` +
-      `${data.get("message") || ""}`;
-    window.location.href = `mailto:info@bytesquad.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const service = (data.get("service") || "").toString();
+
+    const payload = {
+      name: (data.get("name") || "").toString(),
+      email: (data.get("email") || "").toString(),
+      phone: (data.get("phone") || "").toString(),
+      subject: service ? `New enquiry — ${service}` : "New enquiry",
+      message: (data.get("message") || "").toString(),
+      company: (data.get("company") || "").toString(), // honeypot
+    };
+
+    setStatus("sending");
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json().catch(() => ({}));
+      if (res.ok && result.status === "success") {
+        setStatus("ok");
+        form.reset();
+      } else {
+        setErrorMsg(result.message || "Something went wrong. Please try again or email us at info@bytesquad.com.");
+        setStatus("error");
+      }
+    } catch {
+      setErrorMsg("Network error. Please try again or email us at info@bytesquad.com.");
+      setStatus("error");
+    }
   }
 
   return (
     <form className="bs-form" onSubmit={handleSubmit}>
-      {sent && (
+      {status === "ok" && (
         <div className="bs-form-msg ok">
-          Opening your email app… If nothing happens, write to us at <a href="mailto:info@bytesquad.com">info@bytesquad.com</a>. 🎉
+          Thanks! Your message is on its way — we&apos;ll reply within one business day. 🎉
         </div>
       )}
+      {status === "error" && (
+        <div className="bs-form-msg err">
+          {errorMsg}
+        </div>
+      )}
+
+      {/* Honeypot — hidden from humans, catches bots */}
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: 0 }}
+      />
 
       <div className="bs-form-row">
         <div className="bs-field">
@@ -67,7 +104,9 @@ export default function ContactFormClient() {
         <textarea id="message" name="message" rows="5" placeholder="Tell us about your project…" required></textarea>
       </div>
 
-      <button type="submit" className="btn-primary btn-large">Send message</button>
+      <button type="submit" className="btn-primary btn-large" disabled={status === "sending"}>
+        {status === "sending" ? "Sending…" : "Send message"}
+      </button>
       <p className="bs-form-note">We&apos;ll never share your details. Expect a reply within one business day.</p>
     </form>
   );

@@ -1,29 +1,10 @@
 import Link from "next/link";
+import { getServices, getProducts, getProjects } from "@/lib/content";
 
 // No page title here — the home page uses the root default:
 // "byteSquad — Built byte by byte"
 
 const TECH_NAME = { flutter: "Flutter", react: "React", nodejs: "Node.js", kotlin: "Kotlin", java: "Java", express: "Express", figma: "Figma", wordpress: "WordPress" };
-
-const SERVICES = [
-  { title: "App Development", desc: "Native-feeling iOS & Android apps — cross-platform with Flutter or native Kotlin/Java.", href: "/services#app", tech: ["flutter", "kotlin", "java"] },
-  { title: "Web Development", desc: "Fast, responsive websites and web apps built with React and Node.js.", href: "/services#web", tech: ["react", "nodejs"] },
-  { title: "Backend Development", desc: "Reliable, scalable APIs and server logic with Node.js, Express and Java.", href: "/services#backend", tech: ["nodejs", "express", "java"] },
-  { title: "UI/UX Design", desc: "Intuitive, on-brand interfaces designed and prototyped in Figma.", href: "/services#uiux", tech: ["figma"] },
-  { title: "E-commerce", desc: "Online stores and checkout experiences designed to convert.", href: "/services#ecommerce", tech: ["react", "wordpress"] },
-  { title: "Custom Software", desc: "Tailored platforms, dashboards and internal tools around your workflow.", href: "/services#custom", tech: ["react", "nodejs"] },
-  { title: "WordPress", desc: "Flexible, easy-to-manage CMS websites built on WordPress.", href: "/services#wordpress", tech: ["wordpress"] },
-  { title: "ERP Solutions", desc: "Operations, inventory and finance systems tailored to your business.", href: "/services#erp", tech: ["react", "nodejs"] },
-];
-
-const PRODUCTS = [
-  { name: "Taxi App", desc: "A complete ride-booking platform with rider, driver and admin apps.", img: "/menu-icons/taxi.svg", tint: "p-taxi", href: "/white-label/taxi-app" },
-  { name: "OTT / Streaming", desc: "A Netflix-style video streaming service for iOS, Android and Web.", img: "/menu-icons/ott.svg", tint: "p-ott", href: "/white-label/ott-app" },
-  { name: "Dating App", desc: "A modern matchmaking app with profiles, matching and chat.", img: "/menu-icons/dating.svg", tint: "p-dating", href: "/white-label/dating-app" },
-  { name: "CRM", desc: "A Salesforce-style CRM to manage leads, deals and customers.", img: "/menu-icons/crm.svg", tint: "p-crm", href: "/white-label/crm" },
-  { name: "School Management", desc: "An all-in-one ERP for schools: students, attendance, fees and more.", img: "/menu-icons/school.svg", tint: "p-school", href: "/white-label/school" },
-  { name: "LMS — Smart Learning", desc: "Your own course platform with video, quizzes and certificates.", img: "/menu-icons/lms.svg", tint: "p-lms", href: "/white-label/lms" },
-];
 
 const STEPS = [
   { n: "01", title: "Discover", desc: "We dig into your goals, users and requirements." },
@@ -95,7 +76,12 @@ const arrow = (
   </svg>
 );
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [services, products, projects] = await Promise.all([
+    getServices(),
+    getProducts(),
+    getProjects(),
+  ]);
   return (
     <>
       {/* ===== Hero ===== */}
@@ -152,10 +138,10 @@ export default function HomePage() {
           Built for <b>iOS</b><span className="dot">·</span><b>Android</b><span className="dot">·</span><b>Web</b>
         </p>
         <div className="bs-svc-grid">
-          {SERVICES.map((s, i) => (
-            <Link key={s.href} href={s.href} className={`bs-svc-card animate-fade-up ${DELAYS[i % 4]}`}>
+          {services.map((s, i) => (
+            <Link key={s.id || s.title} href={s.href || "/services"} className={`bs-svc-card animate-fade-up ${DELAYS[i % 4]}`}>
               <span className="bs-svc-logos">
-                {s.tech.map((t) => (
+                {(s.tech || []).map((t) => (
                   <span key={t} className="bs-tlogo-tile" title={TECH_NAME[t]}>
                     <img className="bs-tlogo" src={`/tech/${t}.svg`} alt={TECH_NAME[t]} loading="lazy" />
                   </span>
@@ -177,8 +163,8 @@ export default function HomePage() {
           <p>Skip months of development. Pick a proven product, make it yours, and go live fast.</p>
         </div>
         <div className="bs-wl-grid">
-          {PRODUCTS.map((p, i) => (
-            <Link key={p.href} href={p.href} className={`bs-wl-card ${p.tint} animate-fade-up ${DELAYS[i % 4]}`}>
+          {products.map((p, i) => (
+            <Link key={p.id || p.name} href={p.href || "/contact"} className={`bs-wl-card ${p.tint || "p-crm"} animate-fade-up ${DELAYS[i % 4]}`}>
               <span className="bs-wl-ic"><img src={p.img} alt="" loading="lazy" /></span>
               <span className="bs-wl-name">{p.name}</span>
               <span className="bs-wl-d">{p.desc}</span>
@@ -190,6 +176,7 @@ export default function HomePage() {
           <Link href="/white-label" className="btn-primary btn-large">Explore White-Label Solutions</Link>
         </div>
       </section>
+
 
       {/* ===== How We Work ===== */}
       <section className="clients-section">
@@ -234,6 +221,41 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ===== Our Work (admin-managed projects) ===== */}
+      {projects.length > 0 && (
+        <section className="bs-work">
+          <div className="bs-shead animate-fade-up">
+            <span className="bs-eyebrow">Our Work</span>
+            <h2>Projects we&apos;ve shipped</h2>
+            <p>A few of the products we&apos;ve designed, built and launched for our clients.</p>
+          </div>
+          <div className="bs-work-grid">
+            {projects.map((p, i) => {
+              const card = (
+                <>
+                  <span className="bs-work-img">
+                    {p.image ? <img src={p.image} alt={p.name} loading="lazy" /> : <span className="bs-work-imgph">byteSquad</span>}
+                  </span>
+                  <span className="bs-work-body">
+                    <span className="bs-work-name">{p.name}</span>
+                    {p.client ? <span className="bs-work-client">{p.client}</span> : null}
+                    {p.desc ? <span className="bs-work-desc">{p.desc}</span> : null}
+                    {p.link ? <span className="bs-wl-link">Visit project {arrow}</span> : null}
+                  </span>
+                </>
+              );
+              return p.link ? (
+                <a key={p.id} href={p.link} target="_blank" rel="noreferrer" className={`bs-work-card animate-fade-up ${DELAYS[i % 4]}`}>
+                  {card}
+                </a>
+              ) : (
+                <div key={p.id} className={`bs-work-card animate-fade-up ${DELAYS[i % 4]}`}>{card}</div>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       {/* ===== Tech Stack ===== */}
       <section className="bs-tech">

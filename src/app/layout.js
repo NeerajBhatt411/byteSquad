@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ThemeScripts from "@/components/ThemeScripts";
+import SiteChrome from "@/components/SiteChrome";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -61,10 +62,14 @@ export default function RootLayout({ children }) {
         />
         <link rel="preload" as="image" href="/images/hero-photo.webp" fetchPriority="high" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <Header />
+        <SiteChrome>
+          <Header />
+        </SiteChrome>
         {children}
-        <Footer />
-        <WhatsAppButton />
+        <SiteChrome>
+          <Footer />
+          <WhatsAppButton />
+        </SiteChrome>
         <ThemeScripts />
       </body>
     </html>

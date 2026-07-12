@@ -55,14 +55,14 @@ export default function ContactPage() {
                 <span className="bs-reach-ic">{mailIcon}</span>
                 <span><b>Email</b><br />info@bytesquad.com</span>
               </a>
-              <div className="bs-reach-item is-soon">
+              <a className="bs-reach-item" href="tel:+917042232923">
                 <span className="bs-reach-ic">{phoneIcon}</span>
-                <span><b>Phone</b><br />Coming soon</span>
-              </div>
-              <div className="bs-reach-item is-soon">
+                <span><b>Phone</b><br />+91 70422 32923</span>
+              </a>
+              <a className="bs-reach-item" href="https://maps.google.com/?q=B-48%2C%20Sector%2048%2C%20Noida" target="_blank" rel="noopener noreferrer">
                 <span className="bs-reach-ic">{pinIcon}</span>
-                <span><b>Address</b><br />Coming soon</span>
-              </div>
+                <span><b>Address</b><br />B-48, Sector 48, Noida</span>
+              </a>
             </div>
           </div>
 
